@@ -1,0 +1,381 @@
+﻿<krpano version="1.20" title="VIRTUAL STORE">
+<autorotate enabled="true" waittime="1.0" accel="1.5" speed="3" horizon="20" tofov="100"/>
+	<include url="skin/vtourskin.xml" />
+
+	<!-- customize skin settings: maps, gyro, webvr, thumbnails, tooltips, layout, design, ... -->
+	<skin_settings maps="false"
+	               maps_type="google"
+	               maps_bing_api_key=""
+	               maps_google_api_key=""
+	               maps_zoombuttons="false"
+	               maps_loadonfirstuse="true"
+	               gyro="true"
+	               gyro_keeplookingdirection="false"
+	               webvr="true"
+	               webvr_keeplookingdirection="true"
+	               webvr_prev_next_hotspots="true"
+	               littleplanetintro="false"
+	               followmousecontrol="false"
+	               title="true"
+	               thumbs="true"
+	               thumbs_width="120" thumbs_height="80" thumbs_padding="10" thumbs_crop="0|40|240|160"
+	               thumbs_opened="false"
+	               thumbs_text="false"
+	               thumbs_dragging="true"
+	               thumbs_onhoverscrolling="false"
+	               thumbs_scrollbuttons="false"
+	               thumbs_scrollindicator="false"
+	               thumbs_loop="false"
+	               tooltips_buttons="false"
+	               tooltips_thumbs="false"
+	               tooltips_hotspots="false"
+	               tooltips_mapspots="false"
+	               deeplinking="false"
+	               loadscene_flags="MERGE"
+	               loadscene_blend="OPENBLEND(0.5, 0.0, 0.75, 0.05, linear)"
+	               loadscene_blend_prev="SLIDEBLEND(0.5, 180, 0.75, linear)"
+	               loadscene_blend_next="SLIDEBLEND(0.5,   0, 0.75, linear)"
+	               loadingtext="loading..."
+	               layout_width="100%"
+	               layout_maxwidth="814"
+	               controlbar_width="-24"
+	               controlbar_height="40"
+	               controlbar_offset="20"
+	               controlbar_offset_closed="-40"
+	               controlbar_overlap.no-fractionalscaling="10"
+	               controlbar_overlap.fractionalscaling="0"
+	               design_skin_images="vtourskin.png"
+	               design_bgcolor="0x2D3E50"
+	               design_bgalpha="0.8"
+	               design_bgborder="0"
+	               design_bgroundedge="1"
+	               design_bgshadow="0 4 10 0x000000 0.3"
+	               design_thumbborder_bgborder="3 0xFFFFFF 1.0"
+	               design_thumbborder_padding="2"
+	               design_thumbborder_bgroundedge="0"
+	               design_text_css="color:#FFFFFF; font-family:Arial;"
+	               design_text_shadow="1"
+	               />
+
+
+
+	<layer name="sidebar" status="close" type="text" zorder="99" bgcolor="x000000" bgalpha="0.4" align="righttop" x="-350" y="0" width="80%" maxwidth="350" height="100%" keep="true" bgcapture2="false" handcursor2="false"></layer>
+
+	<layer  name="sidebar_parent"
+			keep="true"
+			type="text"
+			zorder="998"
+			bgcolor="0xffffff"
+			bgalpha="1"
+			alpha="0"
+
+			status.normal="close"
+			x.normal="-200"
+			y.normal="-100%"
+			width.normal="200"
+			width2.normal="-200"
+			height.normal="100%"
+			height2.normal="-100%"
+
+			status.mobile="close"
+			x.mobile="-200"
+			y.mobile="-100%"
+			width.mobile="200"
+			width2.mobile="-200"
+			height.mobile="100%"
+			height2.mobile="-100%"
+
+			align="topright"
+			handcursor="false"
+	></layer>
+	<layer  name="sidebar"
+			keep="true"
+			parent="sidebar_parent"
+			type="text"
+			zorder="999"
+			bgcolor=""
+			bgalpha="0"
+			x="0"
+			y="40"
+			width="100%"
+			height="100%"
+			align="topleft"
+			handcursor="false"
+			active_page_url=""
+			previous_page_url=""
+			onclick="emptylayer_onclick_actions();"
+			onover="emptylayer_hover_actions();"
+			onloaded="
+			set(actual_height,get(stageheight));
+			sub(new_height,actual_height,40);
+			txtadd(new_height,'px');
+			set(height,get(new_height));
+		"
+	></layer>
+
+	<layer  name="sidebar_closebox"
+			keep="true"
+			parent="sidebar_parent"
+			type="text"
+			zorder="999"
+			bgcolor="0x000000"
+			bgalpha="1"
+			x="0"
+			y="0"
+			alpha="1"
+			width="100%"
+			height="40"
+			align="topleft"
+			handcursor="false"
+	></layer>
+
+	<layer name="sidebar_close_button_icon"
+		   type="image"
+		   parent="sidebar_closebox"
+		   onclick="act_outemptylayer();"
+		   url="%FIRSTXML%/graphics/emptylayer/close.png"
+		   zorder="999999999999998"
+		   bgalpha="0"
+		   alpha.normal="0"
+		   alpha.mobile="0"
+		   handcursor="true"
+		   align="right"
+		   x="10"
+		   y="0"
+		   width="20"
+		   height="prop"
+		   keep="true"
+	></layer>
+
+	<events name="sidebar_event" keep="true"
+			onresize="
+			set(actual_height,get(stageheight));
+			sub(new_height,actual_height,40);
+			txtadd(new_height,'px');
+			set(layer[sidebar].height,get(new_height));
+		"
+	/>
+
+	<!-- startup action - load the first scene -->
+	<action name="startup" autorun="onstart">
+		if(startscene === null OR !scene[get(startscene)], copy(startscene,scene[0].name); );
+		loadscene(get(startscene), null, MERGE);
+		if(startactions !== null, startactions() );
+	</action>
+
+	<action name="act_inemptylayer">
+		set(layer[sidebar_parent].status,open);
+		set(layer[sidebar_parent].y,0);
+		tween(layer[sidebar_parent].x,0 ,0.5);
+		set(layer[sidebar_parent].alpha,1);
+		tween(layer[sidebar_close_button_icon].alpha,1 ,0.5);
+	</action>
+
+	<action name="act_outemptylayer">
+		set(layer[sidebar_parent].status,close);
+		tween(layer[sidebar_parent].x,get(layer[sidebar_parent].width2) ,0.5);
+		tween(layer[sidebar_close_button_icon].alpha,0 ,0.5);
+	</action>
+
+	<action name="act_in_toggleemptylayer">
+		if(layer[sidebar_parent].status == close,
+		act_inemptylayer();
+		,
+		act_outemptylayer();
+		);
+	</action>
+
+	<action name="act_showemptylayer">
+		set(layer[sidebar_parent].status,open);
+		tween(layer[sidebar_parent].alpha,1 ,0.5);
+		set(layer[sidebar_parent].x,0);
+		tween(layer[sidebar_close_button_icon].alpha,1 ,0.5);
+	</action>
+
+	<action name="act_hideemptylayer">
+		set(layer[sidebar_parent].status,close);
+		tween(layer[sidebar_parent].alpha,0 ,0.5);
+		tween(layer[sidebar_close_button_icon].alpha,1 ,0.5);
+	</action>
+
+	<action name="act_show_toggleemptylayer">
+		if(layer[sidebar_parent].status == close,
+		act_showemptylayer();
+		,
+		act_hideemptylayer();
+		);
+	</action>
+
+	<action name="act_set_widthemptylayer">
+		<!-- delayedcall(0.55, -->
+		<!--tween(layer[sidebar_parent].width,%1,0.5);-->
+		set(layer[sidebar_parent].width,%1);
+		txtadd(temp_width, '-',  %1);
+		set(layer[sidebar_parent].width2, get(temp_width) );
+		<!-- ); -->
+	</action>
+	<action name="act_set_heightemptylayer">
+		<!-- delayedcall(0.55, -->
+		<!--tween(layer[sidebar_parent].height,%1,0.5);-->
+		set(layer[sidebar_parent].height,%1);
+		txtadd(temp_height, '-',  %1);
+		set(layer[sidebar_parent].height2, get(temp_height) );
+		<!-- ); -->
+	</action>
+
+	<action name="act_smart_show_toggleemptylayer">
+		if(layer[sidebar].active_page_url == "",
+		//set(layer[sidebar].previous_page_url,%1);
+		set(layer[sidebar].previous_page_url,"nothing");
+		set(layer[sidebar].active_page_url,%1);
+		,
+		set(layer[sidebar].previous_page_url,get(layer[sidebar].active_page_url));
+		set(layer[sidebar].active_page_url,%1);
+		);
+
+		if(layer[sidebar].active_page_url == layer[sidebar].previous_page_url,
+		act_show_toggleemptylayer();
+		,
+		open_url('%1','100%','100%','','','layer[sidebar]',true,'','','%2','');
+		act_showemptylayer();
+		);
+	</action>
+
+	<action name="act_smart_in_toggleemptylayer">
+		if(layer[sidebar].active_page_url == "",
+		//set(layer[sidebar].previous_page_url,%1);
+		set(layer[sidebar].previous_page_url,"nothing");
+		set(layer[sidebar].active_page_url,%1);
+		,
+		set(layer[sidebar].previous_page_url,get(layer[sidebar].active_page_url));
+		set(layer[sidebar].active_page_url,%1);
+		);
+
+		if(layer[sidebar].active_page_url == layer[sidebar].previous_page_url,
+		act_in_toggleemptylayer();
+		,
+		open_url('%1','100%','100%','','','layer[sidebar]',true,'','','%2','');
+		act_inemptylayer();
+		);
+	</action>
+
+	<action name="emptylayer_onclick_actions">
+
+	</action>
+
+	<action name="emptylayer_hover_actions">
+
+	</action>
+
+	<action name="act_set_heightemptylayer">
+		<!-- delayedcall(0.55, -->
+		<!--tween(layer[sidebar_parent].height,%1,0.5);-->
+		set(layer[sidebar_parent].height,%1);
+		txtadd(temp_height, '-',  %1);
+		set(layer[sidebar_parent].height2, get(temp_height) );
+		<!-- ); -->
+	</action>
+
+	<action name="act_smart_show_toggleemptylayer">
+		if(layer[sidebar].active_page_url == "",
+		//set(layer[sidebar].previous_page_url,%1);
+		set(layer[sidebar].previous_page_url,"nothing");
+		set(layer[sidebar].active_page_url,%1);
+		,
+		set(layer[sidebar].previous_page_url,get(layer[sidebar].active_page_url));
+		set(layer[sidebar].active_page_url,%1);
+		);
+
+		if(layer[sidebar].active_page_url == layer[sidebar].previous_page_url,
+		act_show_toggleemptylayer();
+		,
+		open_url('%1','100%','100%','','','layer[sidebar]',true,'','','%2','');
+		act_showemptylayer();
+		);
+	</action>
+
+	<action name="act_smart_in_toggleemptylayer">
+		if(layer[sidebar].active_page_url == "",
+		//set(layer[sidebar].previous_page_url,%1);
+		set(layer[sidebar].previous_page_url,"nothing");
+		set(layer[sidebar].active_page_url,%1);
+		,
+		set(layer[sidebar].previous_page_url,get(layer[sidebar].active_page_url));
+		set(layer[sidebar].active_page_url,%1);
+		);
+
+		if(layer[sidebar].active_page_url == layer[sidebar].previous_page_url,
+		act_in_toggleemptylayer();
+		,
+		open_url('%1','100%','100%','','','layer[sidebar]',true,'','','%2','');
+		act_inemptylayer();
+		);
+	</action>
+
+	<plugin name="easy_html_lightbox" url="plugins/easy_html_lightbox.js" keep="true" devices="html5" include_jquery="true" onInitialized="init_sidebar();" />
+	<action name="init_sidebar" >
+		plugin[easy_html_lightbox].open_url('product-pages/products.html','','','','',layer[sidebar],true);
+	</action>
+
+
+	<scene name="scene_Showroom_Reception" title="Showroom Reception" onstart="" havevrimage="true" thumburl="panos/Showroom_Reception.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="-17.807" vlookat="13.670" fovtype="MFOV" fov="100.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Showroom_Reception.tiles/preview.jpg" />
+
+		<image if="!webvr.isenabled">
+			<cube url="panos/Showroom_Reception.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1152,2176,4352" />
+		</image>
+
+		<image if="webvr.isenabled">
+			<cube url="panos/Showroom_Reception.tiles/vr/pano_%s.jpg" />
+		</image>
+
+		<hotspot name="spot2" style="skin_navvystyle" ath="-54.622" atv="32.601" linkedscene="scene_cleaning_products_by_kinon" />
+
+
+	</scene>
+
+	<scene name="scene_Cleaning_Products_by_KINON" title="Cleaning Products by KINON" onstart="" havevrimage="true" thumburl="panos/Cleaning_Products_by_KINON.tiles/thumb.jpg" lat="" lng="" heading="">
+
+			<view hlookat="-13.585" vlookat="19.481" fovtype="MFOV" fov="85.328" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+			<preview url="panos/Cleaning_Products_by_KINON.tiles/preview.jpg" />
+
+			<image if="!webvr.isenabled">
+				<cube url="panos/Cleaning_Products_by_KINON.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1152,2176,4352" />
+			</image>
+
+			<image if="webvr.isenabled">
+				<cube url="panos/Cleaning_Products_by_KINON.tiles/vr/pano_%s.jpg" />
+			</image>
+		<hotspot name="spot1" style="skin_navvystyle" ath="-110.237" atv="35.532" linkedscene="scene_showroom_reception" />
+
+		<hotspot name="spot5" style="skin_infostyle" ath="-31.575" atv="9.007" onclick="openProduct1"/>
+		<action name="openProduct1">
+			act_smart_in_toggleemptylayer('product-pages/products1.html','');
+		</action>
+		<hotspot name="spot6" style="skin_infostyle" ath="-23.474" atv="1.637" onclick="openProduct2"/>
+		<action name="openProduct2">
+			act_smart_in_toggleemptylayer('product-pages/products2.html','');
+		</action>
+		<hotspot name="spot7" style="skin_infostyle" ath="-13.380" atv="0.853" onclick="openProduct3"/>
+		<action name="openProduct3">
+			act_smart_in_toggleemptylayer('product-pages/products3.html','');
+		</action>
+		<hotspot name="spot8" style="skin_infostyle" ath="-0.684" atv="1.975" onclick="openProduct4"/>
+		<action name="openProduct4">
+			act_smart_in_toggleemptylayer('product-pages/products4.html','');
+		</action>
+
+
+
+
+
+		</scene>
+
+
+
+
+</krpano>
