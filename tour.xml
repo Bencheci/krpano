@@ -57,10 +57,6 @@
 	               design_text_shadow="1"
 	               />
 
-
-
-	<layer name="sidebar" status="close" type="text" zorder="99" bgcolor="x000000" bgalpha="0.4" align="righttop" x="-350" y="0" width="80%" maxwidth="350" height="100%" keep="true" bgcapture2="false" handcursor2="false"></layer>
-
 	<layer  name="sidebar_parent"
 			keep="true"
 			type="text"
@@ -70,24 +66,25 @@
 			alpha="0"
 
 			status.normal="close"
-			x.normal="-200"
+			x.normal="-350"
 			y.normal="-100%"
-			width.normal="200"
-			width2.normal="-200"
+			width.normal="350"
+			width2.normal="-350"
 			height.normal="100%"
 			height2.normal="-100%"
 
 			status.mobile="close"
-			x.mobile="-200"
+			x.mobile="-350"
 			y.mobile="-100%"
-			width.mobile="200"
-			width2.mobile="-200"
+			width.mobile="350"
+			width2.mobile="-350"
 			height.mobile="100%"
 			height2.mobile="-100%"
 
 			align="topright"
 			handcursor="false"
 	></layer>
+
 	<layer  name="sidebar"
 			keep="true"
 			parent="sidebar_parent"
@@ -118,31 +115,30 @@
 			parent="sidebar_parent"
 			type="text"
 			zorder="999"
-			bgcolor="0x000000"
+			bgcolor="0xFFFFFF"
 			bgalpha="1"
 			x="0"
 			y="0"
 			alpha="1"
-			width="100%"
+			width="40"
 			height="40"
 			align="topleft"
 			handcursor="false"
 	></layer>
-
 	<layer name="sidebar_close_button_icon"
 		   type="image"
 		   parent="sidebar_closebox"
 		   onclick="act_outemptylayer();"
-		   url="%FIRSTXML%/graphics/emptylayer/close.png"
+		   url="%FIRSTXML%/skin/close_button.png"
 		   zorder="999999999999998"
 		   bgalpha="0"
 		   alpha.normal="0"
 		   alpha.mobile="0"
 		   handcursor="true"
 		   align="right"
-		   x="10"
+		   x="0"
 		   y="0"
-		   width="20"
+		   width="40"
 		   height="prop"
 		   keep="true"
 	></layer>
@@ -178,11 +174,7 @@
 	</action>
 
 	<action name="act_in_toggleemptylayer">
-		if(layer[sidebar_parent].status == close,
-		act_inemptylayer();
-		,
-		act_outemptylayer();
-		);
+		if(layer[sidebar_parent].status == close, act_inemptylayer(); , act_outemptylayer(); );
 	</action>
 
 	<action name="act_showemptylayer">
@@ -199,11 +191,7 @@
 	</action>
 
 	<action name="act_show_toggleemptylayer">
-		if(layer[sidebar_parent].status == close,
-		act_showemptylayer();
-		,
-		act_hideemptylayer();
-		);
+		if(layer[sidebar_parent].status == close, act_showemptylayer(); , act_hideemptylayer(); );
 	</action>
 
 	<action name="act_set_widthemptylayer">
@@ -214,6 +202,7 @@
 		set(layer[sidebar_parent].width2, get(temp_width) );
 		<!-- ); -->
 	</action>
+
 	<action name="act_set_heightemptylayer">
 		<!-- delayedcall(0.55, -->
 		<!--tween(layer[sidebar_parent].height,%1,0.5);-->
@@ -265,51 +254,6 @@
 
 	<action name="emptylayer_hover_actions">
 
-	</action>
-
-	<action name="act_set_heightemptylayer">
-		<!-- delayedcall(0.55, -->
-		<!--tween(layer[sidebar_parent].height,%1,0.5);-->
-		set(layer[sidebar_parent].height,%1);
-		txtadd(temp_height, '-',  %1);
-		set(layer[sidebar_parent].height2, get(temp_height) );
-		<!-- ); -->
-	</action>
-
-	<action name="act_smart_show_toggleemptylayer">
-		if(layer[sidebar].active_page_url == "",
-		//set(layer[sidebar].previous_page_url,%1);
-		set(layer[sidebar].previous_page_url,"nothing");
-		set(layer[sidebar].active_page_url,%1);
-		,
-		set(layer[sidebar].previous_page_url,get(layer[sidebar].active_page_url));
-		set(layer[sidebar].active_page_url,%1);
-		);
-
-		if(layer[sidebar].active_page_url == layer[sidebar].previous_page_url,
-		act_show_toggleemptylayer();
-		,
-		open_url('%1','100%','100%','','','layer[sidebar]',true,'','','%2','');
-		act_showemptylayer();
-		);
-	</action>
-
-	<action name="act_smart_in_toggleemptylayer">
-		if(layer[sidebar].active_page_url == "",
-		//set(layer[sidebar].previous_page_url,%1);
-		set(layer[sidebar].previous_page_url,"nothing");
-		set(layer[sidebar].active_page_url,%1);
-		,
-		set(layer[sidebar].previous_page_url,get(layer[sidebar].active_page_url));
-		set(layer[sidebar].active_page_url,%1);
-		);
-
-		if(layer[sidebar].active_page_url == layer[sidebar].previous_page_url,
-		act_in_toggleemptylayer();
-		,
-		open_url('%1','100%','100%','','','layer[sidebar]',true,'','','%2','');
-		act_inemptylayer();
-		);
 	</action>
 
 	<plugin name="easy_html_lightbox" url="plugins/easy_html_lightbox.js" keep="true" devices="html5" include_jquery="true" onInitialized="init_sidebar();" />
