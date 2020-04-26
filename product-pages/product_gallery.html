@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>KINON Product Gallery demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="packages/css/swiper.min.css">
+    <link rel="stylesheet" href="packages/css/custom.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="page-wrapper">
+    <div class="container">
+        <div class="header-logo">
+            <img src="images/logo.jpg" alt="KINON.com Surface design INC"/>
+        </div>
+        <h2 class="product-category">Kinon Lifestyle Collection</h2>
+        <h1 class="product-title">Product Name</h1>
+    </div>
+
+    <!-- Swiper -->
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" data-hash="slide1">
+                <img src="images/600x800/704-KFR121.jpg" alt="Pattern 704" />
+            </div>
+            <div class="swiper-slide" data-hash="slide2">
+                <img src="images/600x800/705-KFR121.jpg" alt="Pattern 705"/>
+            </div>
+            <div class="swiper-slide" data-hash="slide3">
+                <img src="images/600x800/705-KFR121.jpg" alt="Pattern 705"/>
+            </div>
+            <!--<div class="swiper-slide" data-hash="slide4">Slide 4</div>-->
+            <!--<div class="swiper-slide" data-hash="slide5">Slide 5</div>-->
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+        <!-- Add Arrows -->
+        <!--<div class="swiper-button-next"></div>-->
+        <!--<div class="swiper-button-prev"></div>-->
+    </div>
+
+    <a href="https://kinon.com/" target="_blank" class="cta">LEARN MORE</a>
+
+    <div class="product-description">
+        <h3 class="section-title">Colors</h3>
+        <div>
+            <p>Color One</p>
+            <p>Color Two</p>
+        </div>
+        <h3 class="section-title">Dimensions</h3>
+        <div>
+            <p>5ft x 12ft x 0.11in</p>
+            <p>1524 mm x 3658 mm x 2.7 mm</p>
+        </div>
+        <h3 class="section-title">Weight</h3>
+        <div>
+            <p>Lorem ipsum set dolor amet</p>
+            <p>Lorem ipsum set dolor amet</p>
+        </div>
+        <h3 class="section-title">Materials</h3>
+        <div>
+            <p>Lorem ipsum set dolor amet</p>
+            <p>Lorem ipsum set dolor amet</p>
+        </div>
+    </div>
+</div>
+
+<!-- Swiper JS -->
+<script src="packages/js/swiper.min.js"></script>
+
+<!-- Initialize Swiper -->
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        spaceBetween: 30,
+        hashNavigation: {
+            watchState: true,
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        // navigation: {
+        //     nextEl: '.swiper-button-next',
+        //     prevEl: '.swiper-button-prev',
+        // },
+    });
+</script>
+</body>
+</html>
