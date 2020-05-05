@@ -1,61 +1,66 @@
 ﻿<krpano version="1.20" title="VIRTUAL STORE">
-<autorotate enabled="true" waittime="1.0" accel="1.5" speed="3" horizon="20" tofov="100"/>
+
 	<include url="skin/vtourskin.xml" />
 
-	<!-- customize skin settings: maps, gyro, webvr, thumbnails, tooltips, layout, design, ... -->
+	<layer name="skin_logo" url="skin/ghost.png" scale="0.5" keep="true" enabled="false" align="lefttop" x="10" y="10"/>
+	<layer name="skin_book" title="Order Books" url="skin/book.png" scale="0.25" keep="true" enabled="true" align="leftbottom" x="10" y="80%" onclick="openurl('https://kinon.com/shop/stylebook/stylebook',_blank);"/>
+	<layer name="skin_box" title="Order Box" url="skin/box.png" scale="0.2" keep="true" enabled="true" align="leftbottom" x="10" y="70%" onclick="openurl('https://kinon.com/shop/sample-box/sample-box',_blank);"/>
+	<layer name="skin_bird" url="skin/ghostbird.png" scale="1.0" keep="true" enabled="true" align="rightbottom" x="5" y="5" onclick="openurl(https://blueravenstudios.com,,,,4)"/>
+
 	<skin_settings maps="false"
-	               maps_type="google"
-	               maps_bing_api_key=""
-	               maps_google_api_key=""
-	               maps_zoombuttons="false"
-	               maps_loadonfirstuse="true"
-	               gyro="true"
-	               gyro_keeplookingdirection="false"
-	               webvr="true"
-	               webvr_keeplookingdirection="true"
-	               webvr_prev_next_hotspots="true"
-	               littleplanetintro="false"
-	               followmousecontrol="false"
-	               title="true"
-	               thumbs="true"
-	               thumbs_width="120" thumbs_height="80" thumbs_padding="10" thumbs_crop="0|40|240|160"
-	               thumbs_opened="false"
-	               thumbs_text="false"
-	               thumbs_dragging="true"
-	               thumbs_onhoverscrolling="false"
-	               thumbs_scrollbuttons="false"
-	               thumbs_scrollindicator="false"
-	               thumbs_loop="false"
-	               tooltips_buttons="false"
-	               tooltips_thumbs="false"
-	               tooltips_hotspots="false"
-	               tooltips_mapspots="false"
-	               deeplinking="false"
-	               loadscene_flags="MERGE"
-	               loadscene_blend="OPENBLEND(0.5, 0.0, 0.75, 0.05, linear)"
-	               loadscene_blend_prev="SLIDEBLEND(0.5, 180, 0.75, linear)"
-	               loadscene_blend_next="SLIDEBLEND(0.5,   0, 0.75, linear)"
-	               loadingtext="loading..."
-	               layout_width="100%"
-	               layout_maxwidth="814"
-	               controlbar_width="-24"
-	               controlbar_height="40"
-	               controlbar_offset="20"
-	               controlbar_offset_closed="-40"
-	               controlbar_overlap.no-fractionalscaling="10"
-	               controlbar_overlap.fractionalscaling="0"
-	               design_skin_images="vtourskin.png"
-	               design_bgcolor="0x2D3E50"
-	               design_bgalpha="0.8"
-	               design_bgborder="0"
-	               design_bgroundedge="1"
-	               design_bgshadow="0 4 10 0x000000 0.3"
-	               design_thumbborder_bgborder="3 0xFFFFFF 1.0"
-	               design_thumbborder_padding="2"
-	               design_thumbborder_bgroundedge="0"
-	               design_text_css="color:#FFFFFF; font-family:Arial;"
-	               design_text_shadow="1"
-	               />
+								 maps_type="google"
+								 maps_bing_api_key=""
+								 maps_google_api_key=""
+								 maps_zoombuttons="false"
+								 maps_loadonfirstuse="true"
+								 gyro="true"
+								 gyro_keeplookingdirection="false"
+								 webvr="true"
+								 webvr_keeplookingdirection="true"
+								 webvr_prev_next_hotspots="true"
+								 littleplanetintro="false"
+								 followmousecontrol="false"
+								 title="true"
+								 thumbs="true"
+								 thumbs_width="120" thumbs_height="80" thumbs_padding="10" thumbs_crop="0|40|240|160"
+								 thumbs_opened="false"
+								 thumbs_text="false"
+								 thumbs_dragging="true"
+								 thumbs_onhoverscrolling="false"
+								 thumbs_scrollbuttons="false"
+								 thumbs_scrollindicator="false"
+								 thumbs_loop="false"
+								 tooltips_buttons="false"
+								 tooltips_thumbs="true"
+								 tooltips_hotspots="true"
+								 tooltips_mapspots="true"
+								 deeplinking="false"
+								 loadscene_flags="MERGE"
+								 loadscene_blend="OPENBLEND(0.5, 0.0, 0.75, 0.05, linear)"
+								 loadscene_blend_prev="SLIDEBLEND(0.5, 180, 0.75, linear)"
+								 loadscene_blend_next="SLIDEBLEND(0.5,   0, 0.75, linear)"
+								 loadingtext="loading..."
+								 layout_width="100%"
+								 layout_maxwidth="814"
+								 controlbar_width="-24"
+								 controlbar_height="40"
+								 controlbar_offset="20"
+								 controlbar_offset_closed="-40"
+								 controlbar_overlap.no-fractionalscaling="10"
+								 controlbar_overlap.fractionalscaling="0"
+								 design_skin_images="vtourskin.png"
+								 design_bgcolor="0x2D3E50"
+								 design_bgalpha="0.8"
+								 design_bgborder="0"
+								 design_bgroundedge="1"
+								 design_bgshadow="0 4 10 0x000000 0.3"
+								 design_thumbborder_bgborder="3 0xFFFFFF 1.0"
+								 design_thumbborder_padding="2"
+								 design_thumbborder_bgroundedge="0"
+								 design_text_css="color:#FFFFFF; font-family:Arial;"
+								 design_text_shadow="1"
+								 />
+
 
 	<layer  name="sidebar_parent"
 			keep="true"
@@ -74,10 +79,10 @@
 			height2.normal="-100%"
 
 			status.mobile="close"
-			x.mobile="-350"
+			x.mobile="-100%"
 			y.mobile="-100%"
-			width.mobile="350"
-			width2.mobile="-350"
+			width.mobile="100%"
+			width2.mobile="-100%"
 			height.mobile="100%"
 			height2.mobile="-100%"
 
@@ -126,21 +131,21 @@
 			handcursor="false"
 	></layer>
 	<layer name="sidebar_close_button_icon"
-		   type="image"
-		   parent="sidebar_closebox"
-		   onclick="act_outemptylayer();"
-		   url="%FIRSTXML%/skin/close_button.png"
-		   zorder="999999999999998"
-		   bgalpha="0"
-		   alpha.normal="0"
-		   alpha.mobile="0"
-		   handcursor="true"
-		   align="right"
-		   x="0"
-		   y="0"
-		   width="40"
-		   height="prop"
-		   keep="true"
+			 type="image"
+			 parent="sidebar_closebox"
+			 onclick="act_outemptylayer();"
+			 url="%FIRSTXML%/skin/close_button.png"
+			 zorder="999999999999998"
+			 bgalpha="0"
+			 alpha.normal="0"
+			 alpha.mobile="0"
+			 handcursor="true"
+			 align="right"
+			 x="0"
+			 y="0"
+			 width="40"
+			 height="prop"
+			 keep="true"
 	></layer>
 
 	<events name="sidebar_event" keep="true"
@@ -151,6 +156,7 @@
 			set(layer[sidebar].height,get(new_height));
 		"
 	/>
+
 
 	<!-- startup action - load the first scene -->
 	<action name="startup" autorun="onstart">
@@ -256,15 +262,158 @@
 
 	</action>
 
+
 	<plugin name="easy_html_lightbox" url="plugins/easy_html_lightbox.js" keep="true" devices="html5" include_jquery="true" onInitialized="init_sidebar();" />
 	<action name="init_sidebar" >
 		plugin[easy_html_lightbox].open_url('product-pages/products.html','','','','',layer[sidebar],true);
 	</action>
 
+	<scene name="scene_Furnishings_Showcase_10" title="Furnishings Showcase 10" onstart="" havevrimage="true" thumburl="panos/Furnishings_Showcase_10.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="-381.152" vlookat="39.073" fovtype="MFOV" fov="119.763" maxpixelzoom="1" fovmin="80" fovmax="110" limitview="auto" />
+<autorotate enabled="true" waittime="1.0" accel="1.5" speed="3" horizon="20" tofov="100"/>
+		<preview url="panos/Furnishings_Showcase_10.tiles/preview.jpg" />
+
+		<image if="!webvr.isenabled">
+			<cube url="panos/Furnishings_Showcase_10.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1152,2176,4352" />
+		</image>
+
+		<image if="webvr.isenabled">
+			<cube url="panos/Furnishings_Showcase_10.tiles/vr/pano_%s.jpg" />
+		</image>
+		<hotspot name="spot1" style="skin_navvystyle" ath="32.917" atv="25.471" linkedscene="scene_furnishings_showcase_4" />
+		<hotspot name="spot2" style="skin_navvystyle" ath="-131.819" atv="35.660" linkedscene="scene_furnishings_showcase_9" />
+		<hotspot name="spot3" style="skin_navvystyle" ath="-84.794" atv="16.907" linkedscene="scene_showroom_view_11" />
+		<hotspot name="spot4" style="skin_navvystyle" ath="83.865" atv="17.249" linkedscene="scene_showroom_view_5" />
+		<hotspot name="spot5" style="skin_navvystyle" ath="-8.633" atv="6.907" linkedscene="scene_showroom_view_3" />
+		<hotspot name="spot6" style="skin_navvystyle" ath="-174.484" atv="19.572" linkedscene="scene_showroom_view_8" />
+		<hotspot name="spot7" style="skin_navvystyle" ath="159.802" atv="4.447" linkedscene="scene_model_-_349-1" />
+		<hotspot name="spot8" style="skin_navvystyle" ath="137.422" atv="3.441" linkedscene="scene_model_-_kcd207" />
+		<hotspot name="spot9" style="skin_navvystyle" ath="112.450" atv="4.202" linkedscene="scene_model_-_637" />
+		<hotspot name="spot10" style="skin_infostyle" ath="-60.137" atv="32.438" onclick="openProduct1"/>
+		<action name="openProduct1">
+			act_smart_in_toggleemptylayer('product-pages/products1.html','');
+		</action>
+
+		<hotspot name="spot11" style="skin_infostyle" ath="-52.083" atv="13.357" onclick="openProduct2"/>
+		<action name="openProduct2">
+			act_smart_in_toggleemptylayer('product-pages/products2.html','');
+		</action>
+		<hotspot name="spot12" style="skin_infostyle" ath="-25.627" atv="22.584" onclick="openProduct3"/>
+		<action name="openProduct3">
+			act_smart_in_toggleemptylayer('product-pages/products3.html','');
+		</action>
+
+		<hotspot name="spot13" style="skin_infostyle" ath="6.651" atv="17.963" onclick="openProduct4"/>
+		<action name="openProduct4">
+			act_smart_in_toggleemptylayer('product-pages/products4.html','');
+		</action>
+
+		<hotspot name="spot14" style="skin_infostyle" ath="51.553" atv="16.452" onclick="openProduct5"/>
+		<action name="openProduct5">
+			act_smart_in_toggleemptylayer('product-pages/products1.html','');
+		</action>
+
+		<hotspot name="spot15" style="skin_infostyle" ath="136.465" atv="27.710" onclick="openProduct6"/>
+		<action name="openProduct6">
+			act_smart_in_toggleemptylayer('product-pages/products2.html','');
+		</action>
+
+	</scene>
+
+
+	<scene name="scene_KINON_Entrance" title="KINON Entrance" onstart="" havevrimage="true" thumburl="panos/KINON_Entrance.tiles/thumb.jpg" lat="" lng="" heading="">
+<autorotate enabled="true" waittime="1.0" accel="1.5" speed="3" horizon="20" tofov="100"/>
+		<view hlookat="-5.093" vlookat="5.726" fovtype="MFOV" fov="100.000" maxpixelzoom="1" fovmin="80" fovmax="110" limitview="auto" />
+
+		<preview url="panos/KINON_Entrance.tiles/preview.jpg" />
+
+		<image if="!webvr.isenabled">
+			<cube url="panos/KINON_Entrance.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1152,2176,4352" />
+		</image>
+
+		<image if="webvr.isenabled">
+			<cube url="panos/KINON_Entrance.tiles/vr/pano_%s.jpg" />
+		</image>
+		<hotspot name="spot1" style="skin_navvystyle" ath="-118.835" atv="18.275" linkedscene="scene_kinon_street_view" />
+		<hotspot name="spot2" style="skin_navvystyle" ath="67.871" atv="13.315" linkedscene="scene_kinon_gateway" />
+
+	</scene>
+
+	<scene name="scene_KINON_Gateway" title="KINON Gateway" onstart="" havevrimage="true" thumburl="panos/KINON_Gateway.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="27.536" vlookat="7.674" fovtype="MFOV" fov="119.708" maxpixelzoom="1" fovmin="80" fovmax="110" limitview="auto" />
+
+		<preview url="panos/KINON_Gateway.tiles/preview.jpg" />
+
+		<image if="!webvr.isenabled">
+			<cube url="panos/KINON_Gateway.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1152,2176,4352" />
+		</image>
+
+		<image if="webvr.isenabled">
+			<cube url="panos/KINON_Gateway.tiles/vr/pano_%s.jpg" />
+		</image>
+		<hotspot name="spot1" style="skin_navvystyle" ath="-118.590" atv="15.873" linkedscene="scene_kinon_entrance" />
+		<hotspot name="spot2" style="skin_navvystyle" ath="60.290" atv="13.842" linkedscene="scene_kinon_storefront" />
+
+	</scene>
+
+	<scene name="scene_KINON_Storefront" title="KINON Storefront" onstart="" havevrimage="true" thumburl="panos/KINON_Storefront.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="-9.374" vlookat="5.354" fovtype="MFOV" fov="109.987" maxpixelzoom="1" fovmin="80" fovmax="110" limitview="auto" />
+
+		<preview url="panos/KINON_Storefront.tiles/preview.jpg" />
+
+		<image if="!webvr.isenabled">
+			<cube url="panos/KINON_Storefront.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1152,2176,4352" />
+		</image>
+
+		<image if="webvr.isenabled">
+			<cube url="panos/KINON_Storefront.tiles/vr/pano_%s.jpg" />
+		</image>
+		<hotspot name="spot1" style="skin_navvystyle" ath="-92.560" atv="11.697" linkedscene="scene_kinon_gateway" />
+		<hotspot name="spot2" style="skin_navvystyle" ath="13.324" atv="13.140" linkedscene="scene_showroom_entrance" />
+
+	</scene>
+
+	<scene name="scene_KINON_Street_View" title="KINON Street View" onstart="" havevrimage="true" thumburl="panos/KINON_Street_View.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="-32.730" vlookat="14.198" fovtype="MFOV" fov="119.829" maxpixelzoom="1" fovmin="80" fovmax="110" limitview="auto" />
+
+		<preview url="panos/KINON_Street_View.tiles/preview.jpg" />
+
+		<image if="!webvr.isenabled">
+			<cube url="panos/KINON_Street_View.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1152,2176,4352" />
+		</image>
+
+		<image if="webvr.isenabled">
+			<cube url="panos/KINON_Street_View.tiles/vr/pano_%s.jpg" />
+		</image>
+		<hotspot name="spot1" style="skin_navvystyle" ath="-11.873" atv="18.009" linkedscene="scene_kinon_entrance" />
+
+	</scene>
+
+	<scene name="scene_Showroom_Entrance" title="Showroom Entrance" onstart="" havevrimage="true" thumburl="panos/Showroom_Entrance.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="46.840" vlookat="21.746" fovtype="MFOV" fov="121.313" maxpixelzoom="1" fovmin="80" fovmax="110" limitview="auto" />
+
+		<preview url="panos/Showroom_Entrance.tiles/preview.jpg" />
+
+		<image if="!webvr.isenabled">
+			<cube url="panos/Showroom_Entrance.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1152,2176,4352" />
+		</image>
+
+		<image if="webvr.isenabled">
+			<cube url="panos/Showroom_Entrance.tiles/vr/pano_%s.jpg" />
+		</image>
+		<hotspot name="spot1" style="skin_navvystyle" ath="-171.517" atv="15.502" linkedscene="scene_kinon_storefront" />
+		<hotspot name="spot2" style="skin_navvystyle" ath="9.731" atv="24.317" linkedscene="scene_showroom_reception" />
+
+	</scene>
 
 	<scene name="scene_Showroom_Reception" title="Showroom Reception" onstart="" havevrimage="true" thumburl="panos/Showroom_Reception.tiles/thumb.jpg" lat="" lng="" heading="">
 
-		<view hlookat="-17.807" vlookat="13.670" fovtype="MFOV" fov="100.000" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+		<view hlookat="-17.807" vlookat="13.670" fovtype="MFOV" fov="100.000" maxpixelzoom="1" fovmin="80" fovmax="110" limitview="auto" />
 
 		<preview url="panos/Showroom_Reception.tiles/preview.jpg" />
 
@@ -275,15 +424,15 @@
 		<image if="webvr.isenabled">
 			<cube url="panos/Showroom_Reception.tiles/vr/pano_%s.jpg" />
 		</image>
-
+		<hotspot name="spot1" style="skin_navvystyle" ath="-141.539" atv="27.533" linkedscene="scene_showroom_entrance" />
 		<hotspot name="spot2" style="skin_navvystyle" ath="-54.622" atv="32.601" linkedscene="scene_cleaning_products_by_kinon" />
-
+		<hotspot name="spot3" style="skin_navvystyle" ath="29.487" atv="31.171" linkedscene="scene_custom_cabinet_solutions" />
 
 	</scene>
 
-	<scene name="scene_Cleaning_Products_by_KINON" title="Cleaning Products by KINON" onstart="" havevrimage="true" thumburl="panos/Cleaning_Products_by_KINON.tiles/thumb.jpg" lat="" lng="" heading="">
+		<scene name="scene_Cleaning_Products_by_KINON" title="Cleaning Products by KINON" onstart="" havevrimage="true" thumburl="panos/Cleaning_Products_by_KINON.tiles/thumb.jpg" lat="" lng="" heading="">
 
-			<view hlookat="-13.585" vlookat="19.481" fovtype="MFOV" fov="85.328" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+			<view hlookat="-13.585" vlookat="19.481" fovtype="MFOV" fov="85.328" maxpixelzoom="1" fovmin="80" fovmax="110" limitview="auto" />
 
 			<preview url="panos/Cleaning_Products_by_KINON.tiles/preview.jpg" />
 
@@ -295,6 +444,11 @@
 				<cube url="panos/Cleaning_Products_by_KINON.tiles/vr/pano_%s.jpg" />
 			</image>
 		<hotspot name="spot1" style="skin_navvystyle" ath="-110.237" atv="35.532" linkedscene="scene_showroom_reception" />
+		<hotspot name="spot2" style="skin_navvystyle" ath="-174.378" atv="29.779" linkedscene="scene_custom_cabinet_solutions" />
+		<hotspot name="spot3" style="skin_navvystyle" ath="112.850" atv="13.628" linkedscene="scene_furnishings_showcase_1" />
+		<hotspot name="spot4" style="skin_navvystyle" ath="68.234" atv="5.178" linkedscene="scene_model_-_691-531" />
+
+
 
 		<hotspot name="spot5" style="skin_infostyle" ath="-31.575" atv="9.007" onclick="openProduct1"/>
 		<action name="openProduct1">
@@ -308,14 +462,1584 @@
 		<action name="openProduct3">
 			act_smart_in_toggleemptylayer('product-pages/products3.html','');
 		</action>
+
+
 		<hotspot name="spot8" style="skin_infostyle" ath="-0.684" atv="1.975" onclick="openProduct4"/>
 		<action name="openProduct4">
 			act_smart_in_toggleemptylayer('product-pages/products4.html','');
 		</action>
 
 
+		<hotspot name="spot9" style="skin_infostyle" ath="31.813" atv="-2.194" onclick="openProduct5"/>
+		<action name="openProduct5">
+			act_smart_in_toggleemptylayer('product-pages/products1.html','');
+		</action>
+
+		<hotspot name="spot10" style="skin_infostyle" ath="43.724" atv="25.194" onclick="openProduct6"/>
+		<action name="openProduct6">
+			act_smart_in_toggleemptylayer('product-pages/products2.html','');
+		</action>
+
+		<hotspot name="spot11" style="skin_infostyle" ath="73.415" atv="18.253" onclick="openProduct7"/>
+		<action name="openProduct7">
+			act_smart_in_toggleemptylayer('product-pages/products3.html','');
+		</action>
+
+		<hotspot name="spot12" style="skin_infostyle" ath="100.108" atv="20.219" onclick="openProduct8"/>
+		<action name="openProduct8">
+			act_smart_in_toggleemptylayer('product-pages/products4.html','');
+		</action>
+
+		<hotspot name="spot13" style="skin_infostyle" ath="155.235" atv="50.263" onclick="openProduct9"/>
+		<action name="openProduct9">
+			act_smart_in_toggleemptylayer('product-pages/products1.html','');
+		</action>
 
 
+		</scene>
+
+
+
+
+		<scene name="scene_Custom_Cabinet_Solutions" title="Custom Cabinet Solutions" onstart="" havevrimage="true" thumburl="panos/Custom_Cabinet_Solutions.tiles/thumb.jpg" lat="" lng="" heading="">
+
+			<view hlookat="9.085" vlookat="23.033" fovtype="MFOV" fov="119.737" maxpixelzoom="1" fovmin="80" fovmax="110" limitview="auto" />
+
+			<preview url="panos/Custom_Cabinet_Solutions.tiles/preview.jpg" />
+
+			<image if="!webvr.isenabled">
+				<cube url="panos/Custom_Cabinet_Solutions.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1152,2176,4352" />
+			</image>
+
+			<image if="webvr.isenabled">
+				<cube url="panos/Custom_Cabinet_Solutions.tiles/vr/pano_%s.jpg" />
+			</image>
+		<hotspot name="spot1" style="skin_navvystyle" ath="110.835" atv="29.635" linkedscene="scene_showroom_reception" />
+		<hotspot name="spot2" style="skin_navvystyle" ath="-153.027" atv="22.814" linkedscene="scene_furnishings_showcase_1" />
+		<hotspot name="spot3" style="skin_navvystyle" ath="-70.118" atv="38.922" linkedscene="scene_furnishings_showcase_13" />
+		<hotspot name="spot4" style="skin_viddystyle" ath="7.707" atv="17.345" onclick="openProduct1"/>
+		<action name="openProduct1">
+			act_smart_in_toggleemptylayer('product-pages/video.html','');
+		</action>
+
+
+		</scene>
+
+
+	<scene name="scene_Showroom_View_2" title="Showroom View 2" onstart="" havevrimage="true" thumburl="panos/Showroom_View_2.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="-4.514" vlookat="22.122" fovtype="MFOV" fov="115.638" maxpixelzoom="1" fovmin="80" fovmax="110" limitview="auto" />
+		<preview url="panos/Showroom_View_2.tiles/preview.jpg" />
+
+		<image if="!webvr.isenabled">
+			<cube url="panos/Showroom_View_2.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1152,2176,4352" />
+		</image>
+
+		<image if="webvr.isenabled">
+			<cube url="panos/Showroom_View_2.tiles/vr/pano_%s.jpg" />
+		</image>
+		<hotspot name="spot1" style="skin_navvystyle" ath="-33.827" atv="47.888" linkedscene="scene_model_-_026" />
+		<hotspot name="spot2" style="skin_navvystyle" ath="52.206" atv="34.294" linkedscene="scene_furnishings_showcase_1" />
+		<hotspot name="spot3" style="skin_navvystyle" ath="-140.029" atv="22.102" linkedscene="scene_showroom_view_3" />
+		<hotspot name="spot4" style="skin_navvystyle" ath="102.543" atv="26.699" linkedscene="scene_model_-_410" />
+		<hotspot name="spot5" style="skin_navvystyle" ath="166.734" atv="25.059" linkedscene="scene_model_-_349" />
+		<hotspot name="spot6" style="skin_infostyle" ath="-46.531" atv="12.588" onclick="openProduct1"/>
+		<action name="openProduct1">
+			act_smart_in_toggleemptylayer('product-pages/products1.html','');
+		</action>
+
+
+		<hotspot name="spot7" style="skin_infostyle" ath="0.344" atv="7.788" onclick="openProduct2"/>
+		<action name="openProduct2">
+			act_smart_in_toggleemptylayer('product-pages/products2.html','');
+		</action>
+
+
+		<hotspot name="spot8" style="skin_infostyle" ath="-22.416" atv="15.716" onclick="openProduct3"/>
+		<action name="openProduct3">
+			act_smart_in_toggleemptylayer('product-pages/products3.html','');
+		</action>
+
+
+	</scene>
+
+	<scene name="scene_Showroom_View_3" title="Showroom View 3" onstart="" havevrimage="true" thumburl="panos/Showroom_View_3.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="-12.936" vlookat="20.244" fovtype="MFOV" fov="111.034" maxpixelzoom="1" fovmin="80" fovmax="110" limitview="auto" />
+
+		<preview url="panos/Showroom_View_3.tiles/preview.jpg" />
+
+		<image if="!webvr.isenabled">
+			<cube url="panos/Showroom_View_3.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1152,2176,4352" />
+		</image>
+
+		<image if="webvr.isenabled">
+			<cube url="panos/Showroom_View_3.tiles/vr/pano_%s.jpg" />
+		</image>
+		<hotspot name="spot1" style="skin_navvystyle" ath="121.097" atv="21.626" linkedscene="scene_showroom_view_2" />
+		<hotspot name="spot2" style="skin_navvystyle" ath="-25.850" atv="14.298" linkedscene="scene_furnishings_showcase_10" />
+		<hotspot name="spot3" style="skin_navvystyle" ath="-68.300" atv="22.872" linkedscene="scene_furnishings_showcase_4" />
+		<hotspot name="spot4" style="skin_navvystyle" ath="25.134" atv="23.584" linkedscene="scene_model_-_498" />
+		<hotspot name="spot5" style="skin_navvystyle" ath="177.476" atv="24.946" linkedscene="scene_model_-_362" />
+		<hotspot name="spot6" style="skin_navvystyle" ath="-130.417" atv="18.912" linkedscene="scene_model_-_401" />
+		<hotspot name="spot7" style="skin_navvystyle" ath="42.337" atv="52.952" linkedscene="scene_model_-_013" />
+		<hotspot name="spot8" style="skin_infostyle" ath="-24.132" atv="25.788" onclick="openProduct1"/>
+		<action name="openProduct1">
+			act_smart_in_toggleemptylayer('product-pages/products1.html','');
+		</action>
+
+	</scene>
+
+	<scene name="scene_Showroom_View_5" title="Showroom View 5" onstart="" havevrimage="true" thumburl="panos/Showroom_View_5.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="-15.198" vlookat="12.888" fovtype="MFOV" fov="112.508" maxpixelzoom="1" fovmin="80" fovmax="110" limitview="auto" />
+
+		<preview url="panos/Showroom_View_5.tiles/preview.jpg" />
+
+		<image if="!webvr.isenabled">
+			<cube url="panos/Showroom_View_5.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1152,2176,4352" />
+		</image>
+
+		<image if="webvr.isenabled">
+			<cube url="panos/Showroom_View_5.tiles/vr/pano_%s.jpg" />
+		</image>
+		<hotspot name="spot1" style="skin_navvystyle" ath="43.988" atv="23.142" linkedscene="scene_furnishings_showcase_4" />
+		<hotspot name="spot2" style="skin_navvystyle" ath="-65.642" atv="56.676" linkedscene="scene_model_-_637" />
+		<hotspot name="spot3" style="skin_navvystyle" ath="-7.762" atv="15.466" linkedscene="scene_furnishings_showcase_10" />
+		<hotspot name="spot4" style="skin_navvystyle" ath="-149.901" atv="29.855" linkedscene="scene_furnishings_showcase_6" />
+		<hotspot name="spot5" style="skin_navvystyle" ath="115.819" atv="11.717" linkedscene="scene_model_-_702" />
+		<hotspot name="spot6" style="skin_navvystyle" ath="166.876" atv="9.517" linkedscene="scene_model_-_326" />
+		<hotspot name="spot7" style="skin_navvystyle" ath="73.632" atv="12.002" linkedscene="scene_model_-_531" />
+		<hotspot name="spot8" style="skin_infostyle" ath="-26.555" atv="20.161" onclick="openProduct1"/>
+		<action name="openProduct1">
+			act_smart_in_toggleemptylayer('product-pages/products1.html','');
+		</action>
+
+	</scene>
+
+	<scene name="scene_Showroom_View_7" title="Showroom View 7" onstart="" havevrimage="true" thumburl="panos/Showroom_View_7.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="-13.610" vlookat="20.339" fovtype="MFOV" fov="115.441" maxpixelzoom="1" fovmin="80" fovmax="110" limitview="auto" />
+
+		<preview url="panos/Showroom_View_7.tiles/preview.jpg" />
+
+		<image if="!webvr.isenabled">
+			<cube url="panos/Showroom_View_7.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1152,2176,4352" />
+		</image>
+
+		<image if="webvr.isenabled">
+			<cube url="panos/Showroom_View_7.tiles/vr/pano_%s.jpg" />
+		</image>
+		<hotspot name="spot1" style="skin_navvystyle" ath="-58.893" atv="35.832" linkedscene="scene_model_-_597" />
+		<hotspot name="spot2" style="skin_navvystyle" ath="-165.762" atv="36.932" linkedscene="scene_showroom_view_8" />
+		<hotspot name="spot3" style="skin_navvystyle" ath="110.248" atv="33.593" linkedscene="scene_model_-_288" />
+
+	</scene>
+
+	<scene name="scene_Showroom_View_8" title="Showroom View 8" onstart="" havevrimage="true" thumburl="panos/Showroom_View_8.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="396.648" vlookat="14.902" fovtype="MFOV" fov="111.450" maxpixelzoom="1" fovmin="80" fovmax="110" limitview="auto" />
+
+		<preview url="panos/Showroom_View_8.tiles/preview.jpg" />
+
+		<image if="!webvr.isenabled">
+			<cube url="panos/Showroom_View_8.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1152,2176,4352" />
+		</image>
+
+		<image if="webvr.isenabled">
+			<cube url="panos/Showroom_View_8.tiles/vr/pano_%s.jpg" />
+		</image>
+		<hotspot name="spot1" style="skin_navvystyle" ath="-0.800" atv="33.243" linkedscene="scene_furnishings_showcase_9" />
+		<hotspot name="spot2" style="skin_navvystyle" ath="37.681" atv="28.603" linkedscene="scene_furnishings_showcase_10" />
+		<hotspot name="spot3" style="skin_navvystyle" ath="91.829" atv="26.832" linkedscene="scene_model_-_kcd207" />
+		<hotspot name="spot4" style="skin_navvystyle" ath="-149.537" atv="30.454" linkedscene="scene_model_-_288" />
+		<hotspot name="spot5" style="skin_navvystyle" ath="106.694" atv="54.954" linkedscene="scene_showroom_view_11" />
+		<hotspot name="spot6" style="skin_infostyle" ath="-36.167" atv="11.687" onclick="openProduct1"/>
+		<action name="openProduct1">
+			act_smart_in_toggleemptylayer('product-pages/products1.html','');
+		</action>
+
+		<hotspot name="spot7" style="skin_infostyle" ath="65.497" atv="13.805" onclick="openProduct2"/>
+		<action name="openProduct2">
+			act_smart_in_toggleemptylayer('product-pages/products2.html','');
+		</action>
+
+	</scene>
+
+	<scene name="scene_Showroom_View_11" title="Showroom View 11" onstart="" havevrimage="true" thumburl="panos/Showroom_View_11.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="-1.363" vlookat="26.027" fovtype="MFOV" fov="119.814" maxpixelzoom="1" fovmin="80" fovmax="110" limitview="auto" />
+
+		<preview url="panos/Showroom_View_11.tiles/preview.jpg" />
+
+		<image if="!webvr.isenabled">
+			<cube url="panos/Showroom_View_11.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1152,2176,4352" />
+		</image>
+
+		<image if="webvr.isenabled">
+			<cube url="panos/Showroom_View_11.tiles/vr/pano_%s.jpg" />
+		</image>
+		<hotspot name="spot1" style="skin_navvystyle" ath="-76.273" atv="37.123" linkedscene="scene_model_-_600" />
+		<hotspot name="spot2" style="skin_navvystyle" ath="26.553" atv="30.462" linkedscene="scene_furnishings_showcase_10" />
+		<hotspot name="spot3" style="skin_navvystyle" ath="57.620" atv="25.443" linkedscene="scene_furnishings_showcase_9" />
+		<hotspot name="spot4" style="skin_navvystyle" ath="-133.325" atv="26.949" linkedscene="scene_model_-_410-1" />
+		<hotspot name="spot5" style="skin_navvystyle" ath="155.505" atv="6.594" linkedscene="scene_model_-_700d" />
+		<hotspot name="spot6" style="skin_navvystyle" ath="-165.127" atv="3.911" linkedscene="scene_model_-_167-2" />
+
+	</scene>
+
+	<scene name="scene_Showroom_View_12" title="Showroom View 12" onstart="" havevrimage="true" thumburl="panos/Showroom_View_12.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="-1.161" vlookat="19.585" fovtype="MFOV" fov="119.780" maxpixelzoom="1" fovmin="80" fovmax="110" limitview="auto" />
+
+		<preview url="panos/Showroom_View_12.tiles/preview.jpg" />
+
+		<image if="!webvr.isenabled">
+			<cube url="panos/Showroom_View_12.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1152,2176,4352" />
+		</image>
+
+		<image if="webvr.isenabled">
+			<cube url="panos/Showroom_View_12.tiles/vr/pano_%s.jpg" />
+		</image>
+		<hotspot name="spot1" style="skin_navvystyle" ath="154.621" atv="35.460" linkedscene="scene_model_-_410-1" />
+		<hotspot name="spot2" style="skin_navvystyle" ath="4.765" atv="39.384" linkedscene="scene_furnishings_showcase_13" />
+		<hotspot name="spot3" style="skin_navvystyle" ath="38.565" atv="51.528" linkedscene="scene_model_-_dp117-513" />
+		<hotspot name="spot4" style="skin_navvystyle" ath="-129.808" atv="2.451" linkedscene="scene_model_-_669" />
+		<hotspot name="spot5" style="skin_navvystyle" ath="-164.742" atv="8.555" linkedscene="scene_model_-_435" />
+
+	</scene>
+
+
+
+	<scene name="scene_Furnishings_Showcase_1" title="Furnishings Showcase 1" onstart="" havevrimage="true" thumburl="panos/Furnishings_Showcase_1.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="-135.282" vlookat="21.766" fovtype="MFOV" fov="119.900" maxpixelzoom="1" fovmin="80" fovmax="110" limitview="auto" />
+
+		<preview url="panos/Furnishings_Showcase_1.tiles/preview.jpg" />
+
+		<image if="!webvr.isenabled">
+			<cube url="panos/Furnishings_Showcase_1.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1152,2176,4352" />
+		</image>
+
+		<image if="webvr.isenabled">
+			<cube url="panos/Furnishings_Showcase_1.tiles/vr/pano_%s.jpg" />
+		</image>
+		<hotspot name="spot1" style="skin_navvystyle" ath="-100.203" atv="29.659" linkedscene="scene_custom_cabinet_solutions" />
+		<hotspot name="spot2" style="skin_navvystyle" ath="-37.975" atv="13.051" linkedscene="scene_cleaning_products_by_kinon" />
+		<hotspot name="spot3" style="skin_navvystyle" ath="165.240" atv="28.932" linkedscene="scene_showroom_view_2" />
+		<hotspot name="spot4" style="skin_navvystyle" ath="27.092" atv="16.891" linkedscene="scene_model_-_691-531" />
+		<hotspot name="spot5" style="skin_navvystyle" ath="61.966" atv="24.860" linkedscene="scene_model_-_671" />
+		<hotspot name="spot6" style="skin_navvystyle" ath="104.165" atv="23.031" linkedscene="scene_model_-_167-619" />
+		<hotspot name="spot7" style="skin_infostyle" ath="-120.272" atv="15.278" onclick="openProduct1"/>
+		<action name="openProduct1">
+			act_smart_in_toggleemptylayer('product-pages/products1.html','');
+		</action>
+
+		<hotspot name="spot8" style="skin_infostyle" ath="-143.484" atv="14.234" onclick="openProduct2"/>
+		<action name="openProduct2">
+			act_smart_in_toggleemptylayer('product-pages/products2.html','');
+		</action>
+
+		<hotspot name="spot9" style="skin_infostyle" ath="-155.124" atv="5.866" onclick="openProduct3"/>
+		<action name="openProduct3">
+			act_smart_in_toggleemptylayer('product-pages/products3.html','');
+		</action>
+
+		<hotspot name="spot10" style="skin_infostyle" ath="-24.585" atv="26.017" onclick="openProduct4"/>
+		<action name="openProduct4">
+			act_smart_in_toggleemptylayer('product-pages/products4.html','');
+		</action>
+
+		<hotspot name="spot11" style="skin_infostyle" ath="-4.519" atv="17.130" onclick="openProduct5"/>
+		<action name="openProduct5">
+			act_smart_in_toggleemptylayer('product-pages/products1.html','');
+		</action>
+
+		<hotspot name="spot12" style="skin_infostyle" ath="-17.009" atv="7.188" onclick="openProduct6"/>
+		<action name="openProduct6">
+			act_smart_in_toggleemptylayer('product-pages/products2.html','');
+		</action>
+
+		<hotspot name="spot13" style="skin_infostyle" ath="2.070" atv="-3.969" onclick="openProduct7"/>
+		<action name="openProduct1">
+			act_smart_in_toggleemptylayer('product-pages/products3.html','');
+		</action>
+
+	</scene>
+
+	<scene name="scene_Furnishings_Showcase_4" title="Furnishings Showcase 4" onstart="" havevrimage="true" thumburl="panos/Furnishings_Showcase_4.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="-30.947" vlookat="34.699" fovtype="MFOV" fov="118.559" maxpixelzoom="1" fovmin="80" fovmax="110" limitview="auto" />
+
+		<preview url="panos/Furnishings_Showcase_4.tiles/preview.jpg" />
+
+		<image if="!webvr.isenabled">
+			<cube url="panos/Furnishings_Showcase_4.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1152,2176,4352" />
+		</image>
+
+		<image if="webvr.isenabled">
+			<cube url="panos/Furnishings_Showcase_4.tiles/vr/pano_%s.jpg" />
+		</image>
+		<hotspot name="spot1" style="skin_navvystyle" ath="73.473" atv="22.699" linkedscene="scene_showroom_view_3" />
+		<hotspot name="spot2" style="skin_navvystyle" ath="-113.646" atv="25.875" linkedscene="scene_showroom_view_5" />
+		<hotspot name="spot3" style="skin_navvystyle" ath="-31.315" atv="23.101" linkedscene="scene_furnishings_showcase_10" />
+		<hotspot name="spot4" style="skin_navvystyle" ath="-170.720" atv="16.105" linkedscene="scene_model_-_531" />
+		<hotspot name="spot5" style="skin_navvystyle" ath="132.082" atv="14.197" linkedscene="scene_model_-_676" />
+		<hotspot name="spot6" style="skin_infostyle" ath="-59.862" atv="35.834" onclick="openProduct1"/>
+		<action name="openProduct1">
+			act_smart_in_toggleemptylayer('product-pages/products1.html','');
+		</action>
+
+	</scene>
+
+	<scene name="scene_Furnishings_Showcase_6" title="Furnishings Showcase 6" onstart="" havevrimage="true" thumburl="panos/Furnishings_Showcase_6.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="-4.987" vlookat="16.948" fovtype="MFOV" fov="115.832" maxpixelzoom="1" fovmin="80" fovmax="110" limitview="auto" />
+
+		<preview url="panos/Furnishings_Showcase_6.tiles/preview.jpg" />
+
+		<image if="!webvr.isenabled">
+			<cube url="panos/Furnishings_Showcase_6.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1152,2176,4352" />
+		</image>
+
+		<image if="webvr.isenabled">
+			<cube url="panos/Furnishings_Showcase_6.tiles/vr/pano_%s.jpg" />
+		</image>
+		<hotspot name="spot1" style="skin_navvystyle" ath="40.783" atv="35.180" linkedscene="scene_model_-_228" />
+		<hotspot name="spot2" style="skin_navvystyle" ath="136.374" atv="32.659" linkedscene="scene_showroom_view_5" />
+		<hotspot name="spot3" style="skin_navvystyle" ath="-168.707" atv="13.803" linkedscene="scene_model_-_326" />
+		<hotspot name="spot4" style="skin_navvystyle" ath="-106.028" atv="15.672" linkedscene="scene_model_-_167-1" />
+		<hotspot name="spot5" style="skin_infostyle" ath="95.129" atv="23.028" onclick="openProduct1"/>
+		<action name="openProduct1">
+			act_smart_in_toggleemptylayer('product-pages/products1.html','');
+		</action>
+
+	</scene>
+
+	<scene name="scene_Furnishings_Showcase_9" title="Furnishings Showcase 9" onstart="" havevrimage="true" thumburl="panos/Furnishings_Showcase_9.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="14.042" vlookat="24.599" fovtype="MFOV" fov="110.551" maxpixelzoom="1" fovmin="80" fovmax="110" limitview="auto" />
+
+		<preview url="panos/Furnishings_Showcase_9.tiles/preview.jpg" />
+
+		<image if="!webvr.isenabled">
+			<cube url="panos/Furnishings_Showcase_9.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1152,2176,4352" />
+		</image>
+
+		<image if="webvr.isenabled">
+			<cube url="panos/Furnishings_Showcase_9.tiles/vr/pano_%s.jpg" />
+		</image>
+		<hotspot name="spot1" style="skin_navvystyle" ath="103.749" atv="28.330" linkedscene="scene_showroom_view_11" />
+		<hotspot name="spot2" style="skin_navvystyle" ath="-148.812" atv="37.590" linkedscene="scene_furnishings_showcase_10" />
+		<hotspot name="spot3" style="skin_navvystyle" ath="-43.544" atv="29.728" linkedscene="scene_showroom_view_8" />
+		<hotspot name="spot4" style="skin_navvystyle" ath="169.453" atv="5.486" linkedscene="scene_showroom_view_3" />
+		<hotspot name="spot5" style="skin_navvystyle" ath="-73.301" atv="32.356" linkedscene="scene_model_-_349-1" />
+		<hotspot name="spot6" style="skin_infostyle" ath="5.494" atv="14.202" onclick="openProduct1"/>
+		<action name="openProduct1">
+			act_smart_in_toggleemptylayer('product-pages/products1.html','');
+		</action>
+
+	</scene>
+
+
+	<scene name="scene_Furnishings_Showcase_13" title="Furnishings Showcase 13" onstart="" havevrimage="true" thumburl="panos/Furnishings_Showcase_13.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="-3.671" vlookat="31.345" fovtype="MFOV" fov="115.803" maxpixelzoom="1" fovmin="80" fovmax="110" limitview="auto" />
+
+		<preview url="panos/Furnishings_Showcase_13.tiles/preview.jpg" />
+
+		<image if="!webvr.isenabled">
+			<cube url="panos/Furnishings_Showcase_13.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1152,2176,4352" />
+		</image>
+
+		<image if="webvr.isenabled">
+			<cube url="panos/Furnishings_Showcase_13.tiles/vr/pano_%s.jpg" />
+		</image>
+		<hotspot name="spot1" style="skin_navvystyle" ath="-88.770" atv="29.402" linkedscene="scene_custom_cabinet_solutions" />
+		<hotspot name="spot2" style="skin_navvystyle" ath="20.795" atv="52.902" linkedscene="scene_model_-_kcd103" />
+		<hotspot name="spot3" style="skin_navvystyle" ath="161.208" atv="38.883" linkedscene="scene_showroom_view_12" />
+		<hotspot name="spot4" style="skin_navvystyle" ath="100.372" atv="56.665" linkedscene="scene_model_-_dp117-513" />
+		<hotspot name="spot5" style="skin_infostyle" ath="-26.386" atv="15.942" onclick="openProduct1"/>
+		<action name="openProduct1">
+			act_smart_in_toggleemptylayer('product-pages/products1.html','');
+		</action>
+
+		<hotspot name="spot6" style="skin_infostyle" ath="-1.088" atv="23.803" onclick="openProduct2"/>
+		<action name="openProduct2">
+			act_smart_in_toggleemptylayer('product-pages/products2.html','');
+		</action>
+
+		<hotspot name="spot7" style="skin_infostyle" ath="41.870" atv="30.192" onclick="openProduct3"/>
+		<action name="openProduct3">
+			act_smart_in_toggleemptylayer('product-pages/products3.html','');
+		</action>
+
+		<hotspot name="spot8" style="skin_infostyle" ath="-131.022" atv="15.799" onclick="openProduct4"/>
+		<action name="openProduct4">
+			act_smart_in_toggleemptylayer('product-pages/products4.html','');
+		</action>
+
+	</scene>
+
+		<scene name="scene_Showroom_View_14" title="Showroom View 14" onstart="" havevrimage="true" thumburl="panos/Showroom_View_14.tiles/thumb.jpg" lat="" lng="" heading="">
+
+			<view hlookat="344.940" vlookat="17.787" fovtype="MFOV" fov="119.898" maxpixelzoom="1" fovmin="80" fovmax="110" limitview="auto" />
+
+			<preview url="panos/Showroom_View_14.tiles/preview.jpg" />
+
+			<image if="!webvr.isenabled">
+				<cube url="panos/Showroom_View_14.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1152,2176,4352" />
+			</image>
+
+			<image if="webvr.isenabled">
+				<cube url="panos/Showroom_View_14.tiles/vr/pano_%s.jpg" />
+			</image>
+		<hotspot name="spot1" style="skin_navvystyle" ath="-177.358" atv="37.734" linkedscene="scene_showroom_view_7" />
+		<hotspot name="spot2" style="skin_navvystyle" ath="146.235" atv="32.300" linkedscene="scene_model_-_288" />
+		<hotspot name="spot3" style="skin_navvystyle" ath="-153.160" atv="24.471" linkedscene="scene_model_-_597" />
+		<hotspot name="spot4" style="skin_navvystyle" ath="-2.760" atv="28.124" linkedscene="scene_showroom_view_15" />
+		<hotspot name="spot5" style="skin_infostyle" ath="100.658" atv="-11.871" onclick="openProduct1"/>
+		<action name="openProduct1">
+			act_smart_in_toggleemptylayer('product-pages/products1.html','');
+		</action>
+
+		</scene>
+
+		<scene name="scene_Showroom_View_15" title="Showroom View 15" onstart="" havevrimage="true" thumburl="panos/Showroom_View_15.tiles/thumb.jpg" lat="" lng="" heading="">
+
+			<view hlookat="293.888" vlookat="19.688" fovtype="MFOV" fov="119.924" maxpixelzoom="1" fovmin="80" fovmax="110" limitview="auto" />
+
+			<preview url="panos/Showroom_View_15.tiles/preview.jpg" />
+
+			<image if="!webvr.isenabled">
+				<cube url="panos/Showroom_View_15.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1152,2176,4352" />
+			</image>
+
+			<image if="webvr.isenabled">
+				<cube url="panos/Showroom_View_15.tiles/vr/pano_%s.jpg" />
+			</image>
+		<hotspot name="spot1" style="skin_navvystyle" ath="-179.368" atv="25.881" linkedscene="scene_showroom_view_14" />
+		<hotspot name="spot2" style="skin_navvystyle" ath="-20.777" atv="32.353" linkedscene="scene_manufacturing_access" />
+		<hotspot name="spot3" style="skin_navvystyle" ath="43.804" atv="42.186" linkedscene="scene_model_-_667" />
+		<hotspot name="spot4" style="skin_infostyle" ath="-95.348" atv="-0.800" onclick="openProduct1"/>
+		<action name="openProduct1">
+			act_smart_in_toggleemptylayer('product-pages/products1.html','');
+		</action>
+
+		<hotspot name="spot5" style="skin_infostyle" ath="90.588" atv="-0.969" onclick="openProduct2"/>
+		<action name="openProduct2">
+			act_smart_in_toggleemptylayer('product-pages/products2.html','');
+		</action>
+
+		<hotspot name="spot6" style="skin_infostyle" ath="146.859" atv="-1.521" onclick="openProduct3"/>
+		<action name="openProduct3">
+			act_smart_in_toggleemptylayer('product-pages/products3.html','');
+		</action>
+		</scene>
+
+	<scene name="scene_Manufacturing_Access" title="Manufacturing Access" onstart="" havevrimage="true" thumburl="panos/Manufacturing_Access.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="-0.993" vlookat="19.712" fovtype="MFOV" fov="119.360" maxpixelzoom="1" fovmin="80" fovmax="110" limitview="auto" />
+		<preview url="panos/Manufacturing_Access.tiles/preview.jpg" />
+
+		<image if="!webvr.isenabled">
+			<cube url="panos/Manufacturing_Access.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1152,2176,4352" />
+		</image>
+
+		<image if="webvr.isenabled">
+			<cube url="panos/Manufacturing_Access.tiles/vr/pano_%s.jpg" />
+		</image>
+		<hotspot name="spot1" style="skin_navvystyle" ath="-66.927" atv="34.225" linkedscene="scene_showroom_view_15" />
+		<hotspot name="spot2" style="skin_navvystyle" ath="46.897" atv="28.023" linkedscene="scene_access_hallway" />
+
+	</scene>
+
+	<scene name="scene_Access_Hallway" title="Access Hallway" onstart="" havevrimage="true" thumburl="panos/Access_Hallway.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="140.127" vlookat="18.804" fovtype="MFOV" fov="119.934" maxpixelzoom="1" fovmin="80" fovmax="110" limitview="auto" />
+
+		<preview url="panos/Access_Hallway.tiles/preview.jpg" />
+
+		<image if="!webvr.isenabled">
+			<cube url="panos/Access_Hallway.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1152,2176,4352" />
+		</image>
+
+		<image if="webvr.isenabled">
+			<cube url="panos/Access_Hallway.tiles/vr/pano_%s.jpg" />
+		</image>
+		<hotspot name="spot1" style="skin_navvystyle" ath="115.688" atv="32.514" linkedscene="scene_manufacturing_1" />
+		<hotspot name="spot2" style="skin_navvystyle" ath="-63.735" atv="21.127" linkedscene="scene_manufacturing_access" />
+		<hotspot name="spot3" style="skin_navvystyle" ath="-8.180" atv="38.765" linkedscene="scene_lavatory_application" />
+
+	</scene>
+
+	<scene name="scene_Lavatory_Application" title="Lavatory Application" onstart="" havevrimage="true" thumburl="panos/Lavatory_Application.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="-262.399" vlookat="22.397" fovtype="MFOV" fov="119.690" maxpixelzoom="1" fovmin="80" fovmax="110" limitview="auto" />
+
+		<preview url="panos/Lavatory_Application.tiles/preview.jpg" />
+
+		<image if="!webvr.isenabled">
+			<cube url="panos/Lavatory_Application.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1152,2176,4352" />
+		</image>
+
+		<image if="webvr.isenabled">
+			<cube url="panos/Lavatory_Application.tiles/vr/pano_%s.jpg" />
+		</image>
+		<hotspot name="spot1" style="skin_navvystyle" ath="-28.141" atv="35.329" linkedscene="scene_access_hallway" />
+
+		<hotspot name="spot2" style="skin_infostyle" ath="154.403" atv="-8.868" onclick="openProduct1"/>
+		<action name="openProduct1">
+			act_smart_in_toggleemptylayer('product-pages/products1.html','');
+		</action>
+
+	</scene>
+
+
+
+	<scene name="scene_MODEL_-_691-531" title="PATTERN - 691-531" onstart="" havevrimage="true" thumburl="panos/MODEL_-_691-531.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="1.5" fovmin="80" fovmax="110" limitview="auto" />
+
+		<preview url="panos/MODEL_-_691-531.tiles/preview.jpg" />
+
+		<image if="!webvr.isenabled">
+			<cube url="panos/MODEL_-_691-531.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1152,2176,4352" />
+		</image>
+
+		<image if="webvr.isenabled">
+			<cube url="panos/MODEL_-_691-531.tiles/vr/pano_%s.jpg" />
+		</image>
+		<hotspot name="spot1" style="skin_navvystyle" ath="178.793" atv="29.606" linkedscene="scene_cleaning_products_by_kinon" />
+		<hotspot name="spot2" style="skin_navvystyle" ath="119.057" atv="26.577" linkedscene="scene_furnishings_showcase_1" />
+		<hotspot name="spot3" style="skin_navvystyle" ath="76.764" atv="48.655" linkedscene="scene_model_-_671" />
+		<hotspot name="spot5" style="skin_inspectstyle" ath="-4.398" atv="-8.302" onclick="openProduct1"/>
+		<action name="openProduct1">
+			act_smart_in_toggleemptylayer('product-pages/products51.html','');
+		</action>
+
+	</scene>
+
+	<scene name="scene_MODEL_-_671" title="PATTERN - 671" onstart="" havevrimage="true" thumburl="panos/MODEL_-_671.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="1.5" fovmin="80" fovmax="110" limitview="auto" />
+
+		<preview url="panos/MODEL_-_671.tiles/preview.jpg" />
+
+		<image if="!webvr.isenabled">
+			<cube url="panos/MODEL_-_671.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1152,2176,4352" />
+		</image>
+
+		<image if="webvr.isenabled">
+			<cube url="panos/MODEL_-_671.tiles/vr/pano_%s.jpg" />
+		</image>
+		<hotspot name="spot1" style="skin_navvystyle" ath="-63.643" atv="35.984" linkedscene="scene_model_-_691-531" />
+		<hotspot name="spot2" style="skin_navvystyle" ath="86.077" atv="43.936" linkedscene="scene_model_-_167-619" />
+		<hotspot name="spot3" style="skin_navvystyle" ath="142.001" atv="48.512" linkedscene="scene_furnishings_showcase_1" />
+		<hotspot name="spot4" style="skin_navvystyle" ath="-130.419" atv="21.228" linkedscene="scene_cleaning_products_by_kinon" />
+		<hotspot name="spot5" style="skin_inspectstyle" ath="-4.398" atv="-8.302" onclick="openProduct1"/>
+		<action name="openProduct1">
+			act_smart_in_toggleemptylayer('product-pages/products51.html','');
+		</action>
+	</scene>
+
+	<scene name="scene_MODEL_-_167-619" title="PATTERN - 167-619" onstart="" havevrimage="true" thumburl="panos/MODEL_-_167-619.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="1.5" fovmin="80" fovmax="110" limitview="auto" />
+
+
+		<preview url="panos/MODEL_-_167-619.tiles/preview.jpg" />
+
+		<image if="!webvr.isenabled">
+			<cube url="panos/MODEL_-_167-619.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1152,2176,4352" />
+		</image>
+
+		<image if="webvr.isenabled">
+			<cube url="panos/MODEL_-_167-619.tiles/vr/pano_%s.jpg" />
+		</image>
+		<hotspot name="spot1" style="skin_navvystyle" ath="-94.315" atv="42.902" linkedscene="scene_model_-_671" />
+		<hotspot name="spot2" style="skin_navvystyle" ath="-160.755" atv="47.505" linkedscene="scene_furnishings_showcase_1" />
+		<hotspot name="spot3" style="skin_navvystyle" ath="87.747" atv="40.825" linkedscene="scene_showroom_view_2" />
+		<hotspot name="spot5" style="skin_inspectstyle" ath="-4.398" atv="-8.302" onclick="openProduct1"/>
+		<action name="openProduct1">
+			act_smart_in_toggleemptylayer('product-pages/products51.html','');
+		</action>
+	</scene>
+
+	<scene name="scene_MODEL_-_410" title="PATTERN - 410" onstart="" havevrimage="true" thumburl="panos/MODEL_-_410.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="1.5" fovmin="80" fovmax="110" limitview="auto" />
+
+
+		<preview url="panos/MODEL_-_410.tiles/preview.jpg" />
+
+		<image if="!webvr.isenabled">
+			<cube url="panos/MODEL_-_410.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1152,2176,4352" />
+		</image>
+
+		<image if="webvr.isenabled">
+			<cube url="panos/MODEL_-_410.tiles/vr/pano_%s.jpg" />
+		</image>
+		<hotspot name="spot1" style="skin_navvystyle" ath="-94.096" atv="49.628" linkedscene="scene_model_-_167-619" />
+		<hotspot name="spot2" style="skin_navvystyle" ath="135.402" atv="56.571" linkedscene="scene_showroom_view_2" />
+		<hotspot name="spot3" style="skin_navvystyle" ath="84.605" atv="47.172" linkedscene="scene_model_-_349" />
+		<hotspot name="spot4" style="skin_navvystyle" ath="-121.460" atv="31.977" linkedscene="scene_furnishings_showcase_1" />
+		<hotspot name="spot5" style="skin_inspectstyle" ath="-4.398" atv="-8.302" onclick="openProduct1"/>
+		<action name="openProduct1">
+			act_smart_in_toggleemptylayer('product-pages/products51.html','');
+		</action>
+	</scene>
+
+	<scene name="scene_MODEL_-_349" title="PATTERN - 349" onstart="" havevrimage="true" thumburl="panos/MODEL_-_349.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="1.5" fovmin="80" fovmax="110" limitview="auto" />
+
+
+		<preview url="panos/MODEL_-_349.tiles/preview.jpg" />
+
+		<image if="!webvr.isenabled">
+			<cube url="panos/MODEL_-_349.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1152,2176,4352" />
+		</image>
+
+		<image if="webvr.isenabled">
+			<cube url="panos/MODEL_-_349.tiles/vr/pano_%s.jpg" />
+		</image>
+		<hotspot name="spot1" style="skin_navvystyle" ath="-146.250" atv="44.220" linkedscene="scene_showroom_view_2" />
+		<hotspot name="spot2" style="skin_navvystyle" ath="-92.847" atv="47.559" linkedscene="scene_model_-_410" />
+		<hotspot name="spot3" style="skin_navvystyle" ath="81.019" atv="42.058" linkedscene="scene_model_-_362" />
+		<hotspot name="spot5" style="skin_inspectstyle" ath="-4.398" atv="-8.302" onclick="openProduct1"/>
+		<action name="openProduct1">
+			act_smart_in_toggleemptylayer('product-pages/products51.html','');
+		</action>
+	</scene>
+
+	<scene name="scene_MODEL_-_362" title="PATTERN - 362" onstart="" havevrimage="true" thumburl="panos/MODEL_-_362.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="1.5" fovmin="80" fovmax="110" limitview="auto" />
+
+
+		<preview url="panos/MODEL_-_362.tiles/preview.jpg" />
+
+		<image if="!webvr.isenabled">
+			<cube url="panos/MODEL_-_362.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1152,2176,4352" />
+		</image>
+
+		<image if="webvr.isenabled">
+			<cube url="panos/MODEL_-_362.tiles/vr/pano_%s.jpg" />
+		</image>
+		<hotspot name="spot1" style="skin_navvystyle" ath="-63.956" atv="38.736" linkedscene="scene_model_-_349" />
+		<hotspot name="spot2" style="skin_navvystyle" ath="96.675" atv="55.436" linkedscene="scene_model_-_401" />
+		<hotspot name="spot3" style="skin_navvystyle" ath="145.991" atv="61.140" linkedscene="scene_showroom_view_3" />
+		<hotspot name="spot4" style="skin_navvystyle" ath="-166.405" atv="61.885" linkedscene="scene_model_-_013" />
+		<hotspot name="spot5" style="skin_inspectstyle" ath="-4.398" atv="-8.302" onclick="openProduct1"/>
+		<action name="openProduct1">
+			act_smart_in_toggleemptylayer('product-pages/products51.html','');
+		</action>
+	</scene>
+
+	<scene name="scene_MODEL_-_401" title="PATTERN - 401" onstart="" havevrimage="true" thumburl="panos/MODEL_-_401.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="1.5" fovmin="80" fovmax="110" limitview="auto" />
+
+
+		<preview url="panos/MODEL_-_401.tiles/preview.jpg" />
+
+		<image if="!webvr.isenabled">
+			<cube url="panos/MODEL_-_401.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1152,2176,4352" />
+		</image>
+
+		<image if="webvr.isenabled">
+			<cube url="panos/MODEL_-_401.tiles/vr/pano_%s.jpg" />
+		</image>
+		<hotspot name="spot1" style="skin_navvystyle" ath="-73.570" atv="48.676" linkedscene="scene_model_-_362" />
+		<hotspot name="spot2" style="skin_navvystyle" ath="-133.643" atv="51.071" linkedscene="scene_model_-_013" />
+		<hotspot name="spot3" style="skin_navvystyle" ath="87.047" atv="46.867" linkedscene="scene_model_-_676" />
+		<hotspot name="spot4" style="skin_navvystyle" ath="147.153" atv="10.210" linkedscene="scene_furnishings_showcase_10" />
+		<hotspot name="spot5" style="skin_inspectstyle" ath="-4.398" atv="-8.302" onclick="openProduct1"/>
+		<action name="openProduct1">
+			act_smart_in_toggleemptylayer('product-pages/products51.html','');
+		</action>
+	</scene>
+
+	<scene name="scene_MODEL_-_676" title="PATTERN - 676" onstart="" havevrimage="true" thumburl="panos/MODEL_-_676.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="1.5" fovmin="80" fovmax="110" limitview="auto" />
+
+
+		<preview url="panos/MODEL_-_676.tiles/preview.jpg" />
+
+		<image if="!webvr.isenabled">
+			<cube url="panos/MODEL_-_676.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1152,2176,4352" />
+		</image>
+
+		<image if="webvr.isenabled">
+			<cube url="panos/MODEL_-_676.tiles/vr/pano_%s.jpg" />
+		</image>
+		<hotspot name="spot1" style="skin_navvystyle" ath="-85.548" atv="33.429" linkedscene="scene_model_-_401" />
+		<hotspot name="spot2" style="skin_navvystyle" ath="85.473" atv="46.078" linkedscene="scene_model_-_531" />
+		<hotspot name="spot3" style="skin_navvystyle" ath="107.114" atv="25.211" linkedscene="scene_furnishings_showcase_6" />
+		<hotspot name="spot4" style="skin_navvystyle" ath="161.096" atv="26.558" linkedscene="scene_furnishings_showcase_10" />
+		<hotspot name="spot5" style="skin_inspectstyle" ath="-4.398" atv="-8.302" onclick="openProduct1"/>
+		<action name="openProduct1">
+			act_smart_in_toggleemptylayer('product-pages/products51.html','');
+		</action>
+	</scene>
+
+	<scene name="scene_MODEL_-_531" title="PATTERN - 531" onstart="" havevrimage="true" thumburl="panos/MODEL_-_531.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="1.5" fovmin="80" fovmax="110" limitview="auto" />
+
+
+		<preview url="panos/MODEL_-_531.tiles/preview.jpg" />
+
+		<image if="!webvr.isenabled">
+			<cube url="panos/MODEL_-_531.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1152,2176,4352" />
+		</image>
+
+		<image if="webvr.isenabled">
+			<cube url="panos/MODEL_-_531.tiles/vr/pano_%s.jpg" />
+		</image>
+		<hotspot name="spot1" style="skin_navvystyle" ath="-174.254" atv="19.208" linkedscene="scene_furnishings_showcase_10" />
+		<hotspot name="spot2" style="skin_navvystyle" ath="119.604" atv="35.241" linkedscene="scene_model_-_637" />
+		<hotspot name="spot3" style="skin_navvystyle" ath="85.071" atv="49.040" linkedscene="scene_model_-_702" />
+		<hotspot name="spot4" style="skin_navvystyle" ath="-82.329" atv="47.847" linkedscene="scene_model_-_676" />
+		<hotspot name="spot5" style="skin_inspectstyle" ath="-4.398" atv="-8.302" onclick="openProduct1"/>
+		<action name="openProduct1">
+			act_smart_in_toggleemptylayer('product-pages/products51.html','');
+		</action>
+	</scene>
+
+	<scene name="scene_MODEL_-_702" title="PATTERN - 702" onstart="" havevrimage="true" thumburl="panos/MODEL_-_702.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="1.5" fovmin="80" fovmax="110" limitview="auto" />
+
+
+		<preview url="panos/MODEL_-_702.tiles/preview.jpg" />
+
+		<image if="!webvr.isenabled">
+			<cube url="panos/MODEL_-_702.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1152,2176,4352" />
+		</image>
+
+		<image if="webvr.isenabled">
+			<cube url="panos/MODEL_-_702.tiles/vr/pano_%s.jpg" />
+		</image>
+		<hotspot name="spot1" style="skin_navvystyle" ath="158.627" atv="54.144" linkedscene="scene_model_-_637" />
+		<hotspot name="spot2" style="skin_navvystyle" ath="83.299" atv="46.760" linkedscene="scene_model_-_326" />
+		<hotspot name="spot3" style="skin_navvystyle" ath="-76.724" atv="37.708" linkedscene="scene_model_-_531" />
+		<hotspot name="spot4" style="skin_navvystyle" ath="-136.358" atv="36.151" linkedscene="scene_furnishings_showcase_10" />
+		<hotspot name="spot5" style="skin_navvystyle" ath="-84.374" atv="15.920" linkedscene="scene_furnishings_showcase_4" />
+		<hotspot name="spot6" style="skin_inspectstyle" ath="-4.398" atv="-8.302" onclick="openProduct1"/>
+		<action name="openProduct1">
+			act_smart_in_toggleemptylayer('product-pages/products51.html','');
+		</action>
+	</scene>
+
+	<scene name="scene_MODEL_-_326" title="PATTERN - 326" onstart="" havevrimage="true" thumburl="panos/MODEL_-_326.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="1.5" fovmin="80" fovmax="110" limitview="auto" />
+
+
+		<preview url="panos/MODEL_-_326.tiles/preview.jpg" />
+
+		<image if="!webvr.isenabled">
+			<cube url="panos/MODEL_-_326.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1152,2176,4352" />
+		</image>
+
+		<image if="webvr.isenabled">
+			<cube url="panos/MODEL_-_326.tiles/vr/pano_%s.jpg" />
+		</image>
+		<hotspot name="spot1" style="skin_navvystyle" ath="95.742" atv="40.674" linkedscene="scene_model_-_167-1" />
+		<hotspot name="spot2" style="skin_navvystyle" ath="-70.880" atv="42.285" linkedscene="scene_model_-_702" />
+		<hotspot name="spot3" style="skin_navvystyle" ath="-99.581" atv="45.120" linkedscene="scene_showroom_view_5" />
+		<hotspot name="spot4" style="skin_navvystyle" ath="136.650" atv="42.842" linkedscene="scene_model_-_228" />
+		<hotspot name="spot5" style="skin_infostyle" ath="-167.548" atv="23.343" onclick="openProduct1"/>
+		<action name="openProduct1">
+			act_smart_in_toggleemptylayer('product-pages/products1.html','');
+		</action>
+
+<hotspot name="spot6" style="skin_inspectstyle" ath="-4.398" atv="-8.302" onclick="openProduct2"/>
+<action name="openProduct2">
+	act_smart_in_toggleemptylayer('product-pages/products51.html','');
+</action>
+	</scene>
+
+	<scene name="scene_MODEL_-_167-1" title="PATTERN - 167" onstart="" havevrimage="true" thumburl="panos/MODEL_-_167-1.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="1.5" fovmin="80" fovmax="110" limitview="auto" />
+
+
+		<preview url="panos/MODEL_-_167-1.tiles/preview.jpg" />
+
+		<image if="!webvr.isenabled">
+			<cube url="panos/MODEL_-_167-1.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1152,2176,4352" />
+		</image>
+
+		<image if="webvr.isenabled">
+			<cube url="panos/MODEL_-_167-1.tiles/vr/pano_%s.jpg" />
+		</image>
+		<hotspot name="spot1" style="skin_navvystyle" ath="-149.370" atv="54.226" linkedscene="scene_model_-_228" />
+		<hotspot name="spot2" style="skin_navvystyle" ath="-73.049" atv="41.621" linkedscene="scene_model_-_326" />
+		<hotspot name="spot5" style="skin_inspectstyle" ath="-4.398" atv="-8.302" onclick="openProduct1"/>
+		<action name="openProduct1">
+			act_smart_in_toggleemptylayer('product-pages/products51.html','');
+		</action>
+	</scene>
+
+	<scene name="scene_MODEL_-_288" title="PATTERN - 288" onstart="" havevrimage="true" thumburl="panos/MODEL_-_288.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="1.5" fovmin="80" fovmax="110" limitview="auto" />
+
+
+		<preview url="panos/MODEL_-_288.tiles/preview.jpg" />
+
+		<image if="!webvr.isenabled">
+			<cube url="panos/MODEL_-_288.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1152,2176,4352" />
+		</image>
+
+		<image if="webvr.isenabled">
+			<cube url="panos/MODEL_-_288.tiles/vr/pano_%s.jpg" />
+		</image>
+		<hotspot name="spot1" style="skin_navvystyle" ath="98.181" atv="26.704" linkedscene="scene_showroom_view_8" />
+		<hotspot name="spot2" style="skin_navvystyle" ath="161.223" atv="32.452" linkedscene="scene_showroom_view_7" />
+		<hotspot name="spot3" style="skin_navvystyle" ath="-122.854" atv="31.324" linkedscene="scene_showroom_view_14" />
+		<hotspot name="spot4" style="skin_infostyle" ath="-74.147" atv="-1.653" onclick="openProduct1"/>
+		<action name="openProduct1">
+			act_smart_in_toggleemptylayer('product-pages/products1.html','');
+		</action>
+
+<hotspot name="spot5" style="skin_inspectstyle" ath="-4.398" atv="-8.302" onclick="openProduct2"/>
+<action name="openProduct2">
+	act_smart_in_toggleemptylayer('product-pages/products51.html','');
+</action>
+	</scene>
+
+
+		<scene name="scene_MODEL_-_700D" title="PATTERN - 700D" onstart="" havevrimage="true" thumburl="panos/MODEL_-_700D.tiles/thumb.jpg" lat="" lng="" heading="">
+
+			<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="1.5" fovmin="80" fovmax="110" limitview="auto" />
+
+
+			<preview url="panos/MODEL_-_700D.tiles/preview.jpg" />
+
+			<image if="!webvr.isenabled">
+				<cube url="panos/MODEL_-_700D.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1152,2176,4352" />
+			</image>
+
+			<image if="webvr.isenabled">
+				<cube url="panos/MODEL_-_700D.tiles/vr/pano_%s.jpg" />
+			</image>
+			<hotspot name="spot1" style="skin_navvystyle" ath="79.750" atv="45.668" linkedscene="scene_model_-_167-2" />
+			<hotspot name="spot2" style="skin_navvystyle" ath="105.363" atv="30.904" linkedscene="scene_model_-_410-1" />
+			<hotspot name="spot3" style="skin_navvystyle" ath="144.948" atv="34.992" linkedscene="scene_model_-_600" />
+			<hotspot name="spot4" style="skin_navvystyle" ath="-131.728" atv="29.933" linkedscene="scene_furnishings_showcase_9" />
+			<hotspot name="spot5" style="skin_inspectstyle" ath="-4.398" atv="-8.302" onclick="openProduct1"/>
+			<action name="openProduct1">
+				act_smart_in_toggleemptylayer('product-pages/products51.html','');
+			</action>
+		</scene>
+
+
+			<scene name="scene_MODEL_-_167-2" title="PATTERN - 167" onstart="" havevrimage="true" thumburl="panos/MODEL_-_167-2.tiles/thumb.jpg" lat="" lng="" heading="">
+
+				<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="1.5" fovmin="80" fovmax="110" limitview="auto" />
+
+
+				<preview url="panos/MODEL_-_167-2.tiles/preview.jpg" />
+
+				<image if="!webvr.isenabled">
+					<cube url="panos/MODEL_-_167-2.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1152,2176,4352" />
+				</image>
+
+				<image if="webvr.isenabled">
+					<cube url="panos/MODEL_-_167-2.tiles/vr/pano_%s.jpg" />
+				</image>
+				<hotspot name="spot1" style="skin_navvystyle" ath="-91.888" atv="40.440" linkedscene="scene_model_-_700d" />
+				<hotspot name="spot2" style="skin_navvystyle" ath="176.398" atv="36.579" linkedscene="scene_model_-_600" />
+				<hotspot name="spot3" style="skin_navvystyle" ath="113.164" atv="45.230" linkedscene="scene_model_-_410-1" />
+				<hotspot name="spot4" style="skin_navvystyle" ath="-132.066" atv="27.243" linkedscene="scene_furnishings_showcase_9" />
+				<hotspot name="spot5" style="skin_navvystyle" ath="70.370" atv="45.767" linkedscene="scene_model_-_435" />
+				<hotspot name="spot6" style="skin_inspectstyle" ath="-4.398" atv="-8.302" onclick="openProduct1"/>
+				<action name="openProduct1">
+					act_smart_in_toggleemptylayer('product-pages/products51.html','');
+				</action>
+			</scene>
+
+			<scene name="scene_MODEL_-_435" title="PATTERN - 435" onstart="" havevrimage="true" thumburl="panos/MODEL_-_435.tiles/thumb.jpg" lat="" lng="" heading="">
+
+				<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="1.5" fovmin="80" fovmax="110" limitview="auto" />
+
+
+				<preview url="panos/MODEL_-_435.tiles/preview.jpg" />
+
+				<image if="!webvr.isenabled">
+					<cube url="panos/MODEL_-_435.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1152,2176,4352" />
+				</image>
+
+				<image if="webvr.isenabled">
+					<cube url="panos/MODEL_-_435.tiles/vr/pano_%s.jpg" />
+				</image>
+				<hotspot name="spot1" style="skin_navvystyle" ath="-91.938" atv="42.745" linkedscene="scene_model_-_167-2" />
+				<hotspot name="spot2" style="skin_navvystyle" ath="-179.494" atv="19.178" linkedscene="scene_model_-_410-1" />
+				<hotspot name="spot3" style="skin_navvystyle" ath="-128.779" atv="25.354" linkedscene="scene_showroom_view_11" />
+				<hotspot name="spot4" style="skin_navvystyle" ath="82.669" atv="45.938" linkedscene="scene_model_-_669" />
+				<hotspot name="spot5" style="skin_navvystyle" ath="127.698" atv="35.738" linkedscene="scene_showroom_view_12" />
+				<hotspot name="spot6" style="skin_inspectstyle" ath="-4.398" atv="-8.302" onclick="openProduct1"/>
+				<action name="openProduct1">
+					act_smart_in_toggleemptylayer('product-pages/products51.html','');
+				</action>
+			</scene>
+
+			<scene name="scene_MODEL_-_669" title="PATTERN - 669" onstart="" havevrimage="true" thumburl="panos/MODEL_-_669.tiles/thumb.jpg" lat="" lng="" heading="">
+
+				<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="1.5" fovmin="80" fovmax="110" limitview="auto" />
+
+
+				<preview url="panos/MODEL_-_669.tiles/preview.jpg" />
+
+				<image if="!webvr.isenabled">
+					<cube url="panos/MODEL_-_669.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1152,2176,4352" />
+				</image>
+
+				<image if="webvr.isenabled">
+					<cube url="panos/MODEL_-_669.tiles/vr/pano_%s.jpg" />
+				</image>
+				<hotspot name="spot1" style="skin_navvystyle" ath="-88.099" atv="55.149" linkedscene="scene_model_-_435" />
+				<hotspot name="spot2" style="skin_navvystyle" ath="-132.172" atv="41.320" linkedscene="scene_model_-_410-1" />
+				<hotspot name="spot3" style="skin_navvystyle" ath="178.110" atv="46.274" linkedscene="scene_showroom_view_12" />
+				<hotspot name="spot5" style="skin_inspectstyle" ath="-4.398" atv="-8.302" onclick="openProduct1"/>
+				<action name="openProduct1">
+					act_smart_in_toggleemptylayer('product-pages/products51.html','');
+				</action>
+			</scene>
+
+			<scene name="scene_MODEL_-_026" title="PATTERN - 026" onstart="" havevrimage="true" thumburl="panos/MODEL_-_026.tiles/thumb.jpg" lat="" lng="" heading="">
+
+				<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="1.5" fovmin="80" fovmax="110" limitview="auto" />
+
+
+				<preview url="panos/MODEL_-_026.tiles/preview.jpg" />
+
+				<image if="!webvr.isenabled">
+					<cube url="panos/MODEL_-_026.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1152,2176,4352" />
+				</image>
+
+				<image if="webvr.isenabled">
+					<cube url="panos/MODEL_-_026.tiles/vr/pano_%s.jpg" />
+				</image>
+				<hotspot name="spot1" style="skin_navvystyle" ath="-94.728" atv="46.646" linkedscene="scene_showroom_view_2" />
+				<hotspot name="spot2" style="skin_navvystyle" ath="175.509" atv="36.398" linkedscene="scene_furnishings_showcase_1" />
+				<hotspot name="spot3" style="skin_navvystyle" ath="71.512" atv="43.098" linkedscene="scene_model_-_kcd103" />
+				<hotspot name="spot4" style="skin_navvystyle" ath="-79.347" atv="10.826" linkedscene="scene_model_-_349" />
+				<hotspot name="spot5" style="skin_navvystyle" ath="-109.600" atv="1.320" linkedscene="scene_model_-_410" />
+				<hotspot name="spot6" style="skin_inspectstyle" ath="-4.398" atv="-8.302" onclick="openProduct1"/>
+				<action name="openProduct1">
+					act_smart_in_toggleemptylayer('product-pages/products51.html','');
+				</action>
+			</scene>
+
+			<scene name="scene_MODEL_-_KCD103" title="PATTERN - KCD103" onstart="" havevrimage="true" thumburl="panos/MODEL_-_KCD103.tiles/thumb.jpg" lat="" lng="" heading="">
+
+				<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="1.5" fovmin="80" fovmax="110" limitview="auto" />
+
+
+				<preview url="panos/MODEL_-_KCD103.tiles/preview.jpg" />
+
+				<image if="!webvr.isenabled">
+					<cube url="panos/MODEL_-_KCD103.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1152,2176,4352" />
+				</image>
+
+				<image if="webvr.isenabled">
+					<cube url="panos/MODEL_-_KCD103.tiles/vr/pano_%s.jpg" />
+				</image>
+				<hotspot name="spot1" style="skin_navvystyle" ath="-89.429" atv="36.802" linkedscene="scene_model_-_026" />
+				<hotspot name="spot2" style="skin_navvystyle" ath="85.669" atv="52.901" linkedscene="scene_model_-_dp117-513" />
+				<hotspot name="spot5" style="skin_inspectstyle" ath="-4.398" atv="-8.302" onclick="openProduct1"/>
+				<action name="openProduct1">
+					act_smart_in_toggleemptylayer('product-pages/products51.html','');
+				</action>
+			</scene>
+
+			<scene name="scene_MODEL_-_DP117-513" title="PATTERN - DP117-513" onstart="" havevrimage="true" thumburl="panos/MODEL_-_DP117-513.tiles/thumb.jpg" lat="" lng="" heading="">
+
+				<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="1.5" fovmin="80" fovmax="110" limitview="auto" />
+
+
+				<preview url="panos/MODEL_-_DP117-513.tiles/preview.jpg" />
+
+				<image if="!webvr.isenabled">
+					<cube url="panos/MODEL_-_DP117-513.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1152,2176,4352" />
+				</image>
+
+				<image if="webvr.isenabled">
+					<cube url="panos/MODEL_-_DP117-513.tiles/vr/pano_%s.jpg" />
+				</image>
+				<hotspot name="spot1" style="skin_navvystyle" ath="95.589" atv="52.094" linkedscene="scene_furnishings_showcase_13" />
+				<hotspot name="spot2" style="skin_navvystyle" ath="-175.675" atv="35.188" linkedscene="scene_custom_cabinet_solutions" />
+				<hotspot name="spot3" style="skin_navvystyle" ath="-92.281" atv="38.707" linkedscene="scene_model_-_kcd103" />
+				<hotspot name="spot5" style="skin_inspectstyle" ath="-4.398" atv="-8.302" onclick="openProduct1"/>
+				<action name="openProduct1">
+					act_smart_in_toggleemptylayer('product-pages/products51.html','');
+				</action>
+			</scene>
+
+			<scene name="scene_MODEL_-_410-1" title="PATTERN - 410" onstart="" havevrimage="true" thumburl="panos/MODEL_-_410-1.tiles/thumb.jpg" lat="" lng="" heading="">
+
+				<view hlookat="-44.769" vlookat="29.606" fovtype="MFOV" fov="119.931" maxpixelzoom="1.5" fovmin="80" fovmax="110" limitview="auto" />
+
+
+				<preview url="panos/MODEL_-_410-1.tiles/preview.jpg" />
+
+				<image if="!webvr.isenabled">
+					<cube url="panos/MODEL_-_410-1.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1152,2176,4352" />
+				</image>
+
+				<image if="webvr.isenabled">
+					<cube url="panos/MODEL_-_410-1.tiles/vr/pano_%s.jpg" />
+				</image>
+				<hotspot name="spot1" style="skin_navvystyle" ath="64.785" atv="30.014" linkedscene="scene_furnishings_showcase_10" />
+				<hotspot name="spot2" style="skin_navvystyle" ath="-89.517" atv="39.960" linkedscene="scene_showroom_view_12" />
+				<hotspot name="spot3" style="skin_navvystyle" ath="-145.734" atv="1.604" linkedscene="scene_model_-_669" />
+				<hotspot name="spot4" style="skin_navvystyle" ath="173.691" atv="4.198" linkedscene="scene_model_-_435" />
+				<hotspot name="spot5" style="skin_navvystyle" ath="133.467" atv="3.359" linkedscene="scene_model_-_167-2" />
+				<hotspot name="spot6" style="skin_navvystyle" ath="100.607" atv="28.673" linkedscene="scene_model_-_700d" />
+				<hotspot name="spot7" style="skin_inspectstyle" ath="-4.398" atv="-8.302" onclick="openProduct1"/>
+				<action name="openProduct1">
+					act_smart_in_toggleemptylayer('product-pages/products51.html','');
+				</action>
+			</scene>
+
+			<scene name="scene_MODEL_-_600" title="PATTERN - 600" onstart="" havevrimage="true" thumburl="panos/MODEL_-_600.tiles/thumb.jpg" lat="" lng="" heading="">
+
+				<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="1.5" fovmin="80" fovmax="110" limitview="auto" />
+
+
+				<preview url="panos/MODEL_-_600.tiles/preview.jpg" />
+
+				<image if="!webvr.isenabled">
+					<cube url="panos/MODEL_-_600.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1152,2176,4352" />
+				</image>
+
+				<image if="webvr.isenabled">
+					<cube url="panos/MODEL_-_600.tiles/vr/pano_%s.jpg" />
+				</image>
+				<hotspot name="spot1" style="skin_navvystyle" ath="78.273" atv="41.023" linkedscene="scene_model_-_498" />
+				<hotspot name="spot2" style="skin_navvystyle" ath="-177.196" atv="32.309" linkedscene="scene_furnishings_showcase_9" />
+				<hotspot name="spot3" style="skin_navvystyle" ath="-104.255" atv="45.102" linkedscene="scene_showroom_view_11" />
+				<hotspot name="spot5" style="skin_inspectstyle" ath="-4.398" atv="-8.302" onclick="openProduct1"/>
+				<action name="openProduct1">
+					act_smart_in_toggleemptylayer('product-pages/products51.html','');
+				</action>
+			</scene>
+
+
+			<scene name="scene_MODEL_-_498" title="PATTERN - 498" onstart="" havevrimage="true" thumburl="panos/MODEL_-_498.tiles/thumb.jpg" lat="" lng="" heading="">
+
+				<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="1.5" fovmin="80" fovmax="110" limitview="auto" />
+
+
+				<preview url="panos/MODEL_-_498.tiles/preview.jpg" />
+
+				<image if="!webvr.isenabled">
+					<cube url="panos/MODEL_-_498.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1152,2176,4352" />
+				</image>
+
+				<image if="webvr.isenabled">
+					<cube url="panos/MODEL_-_498.tiles/vr/pano_%s.jpg" />
+				</image>
+				<hotspot name="spot1" style="skin_navvystyle" ath="76.744" atv="37.149" linkedscene="scene_model_-_013" />
+				<hotspot name="spot2" style="skin_navvystyle" ath="-102.521" atv="25.187" linkedscene="scene_model_-_600" />
+				<hotspot name="spot3" style="skin_navvystyle" ath="-159.283" atv="20.565" linkedscene="scene_furnishings_showcase_9" />
+				<hotspot name="spot4" style="skin_navvystyle" ath="168.953" atv="18.257" linkedscene="scene_furnishings_showcase_10" />
+				<hotspot name="spot5" style="skin_inspectstyle" ath="-4.398" atv="-8.302" onclick="openProduct1"/>
+				<action name="openProduct1">
+					act_smart_in_toggleemptylayer('product-pages/products51.html','');
+				</action>
+			</scene>
+
+			<scene name="scene_MODEL_-_013" title="PATTERN - 013" onstart="" havevrimage="true" thumburl="panos/MODEL_-_013.tiles/thumb.jpg" lat="" lng="" heading="">
+
+				<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="1.5" fovmin="80" fovmax="110" limitview="auto" />
+
+
+				<preview url="panos/MODEL_-_013.tiles/preview.jpg" />
+
+				<image if="!webvr.isenabled">
+					<cube url="panos/MODEL_-_013.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1152,2176,4352" />
+				</image>
+
+				<image if="webvr.isenabled">
+					<cube url="panos/MODEL_-_013.tiles/vr/pano_%s.jpg" />
+				</image>
+				<hotspot name="spot1" style="skin_navvystyle" ath="99.977" atv="40.837" linkedscene="scene_showroom_view_3" />
+				<hotspot name="spot2" style="skin_navvystyle" ath="149.104" atv="27.927" linkedscene="scene_furnishings_showcase_4" />
+				<hotspot name="spot3" style="skin_navvystyle" ath="-90.987" atv="36.769" linkedscene="scene_model_-_498" />
+				<hotspot name="spot5" style="skin_inspectstyle" ath="-4.398" atv="-8.302" onclick="openProduct1"/>
+				<action name="openProduct1">
+					act_smart_in_toggleemptylayer('product-pages/products51.html','');
+				</action>
+			</scene>
+
+			<scene name="scene_MODEL_-_637" title="PATTERN - 637" onstart="" havevrimage="true" thumburl="panos/MODEL_-_637.tiles/thumb.jpg" lat="" lng="" heading="">
+
+				<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="1.5" fovmin="80" fovmax="110" limitview="auto" />
+
+
+				<preview url="panos/MODEL_-_637.tiles/preview.jpg" />
+
+				<image if="!webvr.isenabled">
+					<cube url="panos/MODEL_-_637.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1152,2176,4352" />
+				</image>
+
+				<image if="webvr.isenabled">
+					<cube url="panos/MODEL_-_637.tiles/vr/pano_%s.jpg" />
+				</image>
+				<hotspot name="spot1" style="skin_navvystyle" ath="-113.676" atv="44.031" linkedscene="scene_model_-_702" />
+				<hotspot name="spot2" style="skin_navvystyle" ath="-161.862" atv="35.309" linkedscene="scene_furnishings_showcase_4" />
+				<hotspot name="spot3" style="skin_navvystyle" ath="77.598" atv="39.053" linkedscene="scene_model_-_kcd207" />
+				<hotspot name="spot5" style="skin_inspectstyle" ath="-4.398" atv="-8.302" onclick="openProduct1"/>
+				<action name="openProduct1">
+					act_smart_in_toggleemptylayer('product-pages/products51.html','');
+				</action>
+			</scene>
+
+			<scene name="scene_MODEL_-_KCD207" title="PATTERN - KCD207" onstart="" havevrimage="true" thumburl="panos/MODEL_-_KCD207.tiles/thumb.jpg" lat="" lng="" heading="">
+
+				<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="1.5" fovmin="80" fovmax="110" limitview="auto" />
+
+
+				<preview url="panos/MODEL_-_KCD207.tiles/preview.jpg" />
+
+				<image if="!webvr.isenabled">
+					<cube url="panos/MODEL_-_KCD207.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1152,2176,4352" />
+				</image>
+
+				<image if="webvr.isenabled">
+					<cube url="panos/MODEL_-_KCD207.tiles/vr/pano_%s.jpg" />
+				</image>
+				<hotspot name="spot1" style="skin_navvystyle" ath="85.317" atv="33.599" linkedscene="scene_model_-_349-1" />
+				<hotspot name="spot2" style="skin_navvystyle" ath="-98.465" atv="30.168" linkedscene="scene_model_-_637" />
+				<hotspot name="spot3" style="skin_navvystyle" ath="128.348" atv="20.274" linkedscene="scene_furnishings_showcase_9" />
+				<hotspot name="spot4" style="skin_infostyle" ath="175.852" atv="36.954" onclick="openProduct1"/>
+				<action name="openProduct1">
+					act_smart_in_toggleemptylayer('product-pages/products1.html','');
+				</action>
+
+		<hotspot name="spot5" style="skin_inspectstyle" ath="-4.398" atv="-8.302" onclick="openProduct2"/>
+		<action name="openProduct2">
+			act_smart_in_toggleemptylayer('product-pages/products51.html','');
+		</action>
+			</scene>
+
+			<scene name="scene_MODEL_-_349-1" title="PATTERN - 349" onstart="" havevrimage="true" thumburl="panos/MODEL_-_349-1.tiles/thumb.jpg" lat="" lng="" heading="">
+
+				<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="1.5" fovmin="80" fovmax="110" limitview="auto" />
+
+
+				<preview url="panos/MODEL_-_349-1.tiles/preview.jpg" />
+
+				<image if="!webvr.isenabled">
+					<cube url="panos/MODEL_-_349-1.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1152,2176,4352" />
+				</image>
+
+				<image if="webvr.isenabled">
+					<cube url="panos/MODEL_-_349-1.tiles/vr/pano_%s.jpg" />
+				</image>
+				<hotspot name="spot1" style="skin_navvystyle" ath="-80.306" atv="41.349" linkedscene="scene_model_-_kcd207" />
+				<hotspot name="spot2" style="skin_navvystyle" ath="89.391" atv="45.282" linkedscene="scene_showroom_view_8" />
+				<hotspot name="spot3" style="skin_navvystyle" ath="172.311" atv="43.391" linkedscene="scene_furnishings_showcase_9" />
+				<hotspot name="spot5" style="skin_inspectstyle" ath="-4.398" atv="-8.302" onclick="openProduct1"/>
+				<action name="openProduct1">
+					act_smart_in_toggleemptylayer('product-pages/products51.html','');
+				</action>
+			</scene>
+
+			<scene name="scene_MODEL_-_597" title="PATTERN - 597" onstart="" havevrimage="true" thumburl="panos/MODEL_-_597.tiles/thumb.jpg" lat="" lng="" heading="">
+
+				<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="1.5" fovmin="80" fovmax="110" limitview="auto" />
+
+
+				<preview url="panos/MODEL_-_597.tiles/preview.jpg" />
+
+				<image if="!webvr.isenabled">
+					<cube url="panos/MODEL_-_597.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1152,2176,4352" />
+				</image>
+
+				<image if="webvr.isenabled">
+					<cube url="panos/MODEL_-_597.tiles/vr/pano_%s.jpg" />
+				</image>
+				<hotspot name="spot1" style="skin_navvystyle" ath="86.007" atv="24.830" linkedscene="scene_model_-_228" />
+				<hotspot name="spot2" style="skin_navvystyle" ath="-106.716" atv="36.912" linkedscene="scene_showroom_view_7" />
+				<hotspot name="spot3" style="skin_navvystyle" ath="-150.411" atv="32.402" linkedscene="scene_showroom_view_14" />
+				<hotspot name="spot4" style="skin_navvystyle" ath="-58.194" atv="31.967" linkedscene="scene_showroom_view_8" />
+				<hotspot name="spot5" style="skin_infostyle" ath="126.680" atv="24.351" onclick="openProduct1"/>
+				<action name="openProduct1">
+					act_smart_in_toggleemptylayer('product-pages/products1.html','');
+				</action>
+
+		<hotspot name="spot6" style="skin_inspectstyle" ath="-4.398" atv="-8.302" onclick="openProduct2"/>
+		<action name="openProduct2">
+			act_smart_in_toggleemptylayer('product-pages/products51.html','');
+		</action>
+			</scene>
+
+			<scene name="scene_MODEL_-_228" title="PATTERN - 228" onstart="" havevrimage="true" thumburl="panos/MODEL_-_228.tiles/thumb.jpg" lat="" lng="" heading="">
+
+				<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="1.5" fovmin="80" fovmax="110" limitview="auto" />
+
+
+				<preview url="panos/MODEL_-_228.tiles/preview.jpg" />
+
+				<image if="!webvr.isenabled">
+					<cube url="panos/MODEL_-_228.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1152,2176,4352" />
+				</image>
+
+				<image if="webvr.isenabled">
+					<cube url="panos/MODEL_-_228.tiles/vr/pano_%s.jpg" />
+				</image>
+				<hotspot name="spot1" style="skin_navvystyle" ath="-85.863" atv="28.296" linkedscene="scene_model_-_597" />
+				<hotspot name="spot2" style="skin_navvystyle" ath="95.833" atv="43.350" linkedscene="scene_furnishings_showcase_6" />
+				<hotspot name="spot3" style="skin_infostyle" ath="-133.349" atv="34.928" onclick="openProduct1"/>
+				<action name="openProduct1">
+					act_smart_in_toggleemptylayer('product-pages/products1.html','');
+				</action>
+
+		<hotspot name="spot5" style="skin_inspectstyle" ath="-4.398" atv="-8.302" onclick="openProduct2"/>
+		<action name="openProduct2">
+			act_smart_in_toggleemptylayer('product-pages/products51.html','');
+		</action>
+			</scene>
+
+
+	<scene name="scene_MODEL_-_667" title="PATTERN - 667" onstart="" havevrimage="true" thumburl="panos/MODEL_-_667.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="1.5" fovmin="80" fovmax="110" limitview="auto" />
+
+
+		<preview url="panos/MODEL_-_667.tiles/preview.jpg" />
+
+		<image if="!webvr.isenabled">
+			<cube url="panos/MODEL_-_667.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1152,2176,4352" />
+		</image>
+
+		<image if="webvr.isenabled">
+			<cube url="panos/MODEL_-_667.tiles/vr/pano_%s.jpg" />
+		</image>
+		<hotspot name="spot1" style="skin_navvystyle" ath="-166.950" atv="32.637" linkedscene="scene_showroom_view_15" />
+		<hotspot name="spot2" style="skin_navvystyle" ath="-81.417" atv="28.199" linkedscene="scene_manufacturing_access" />
+		<hotspot name="spot5" style="skin_inspectstyle" ath="-4.398" atv="-8.302" onclick="openProduct1"/>
+		<action name="openProduct1">
+			act_smart_in_toggleemptylayer('product-pages/products51.html','');
+		</action>
+	</scene>
+
+
+
+		<scene name="scene_Manufacturing_1" title="Manufacturing 1" onstart="" havevrimage="true" thumburl="panos/Manufacturing_1.tiles/thumb.jpg" lat="" lng="" heading="">
+
+			<view hlookat="-6.103" vlookat="17.513" fovtype="MFOV" fov="100.335" maxpixelzoom="1.5" fovmin="80" fovmax="110" limitview="auto" />
+
+
+			<preview url="panos/Manufacturing_1.tiles/preview.jpg" />
+
+			<image if="!webvr.isenabled">
+				<cube url="panos/Manufacturing_1.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1152,2176,4352" />
+			</image>
+
+			<image if="webvr.isenabled">
+				<cube url="panos/Manufacturing_1.tiles/vr/pano_%s.jpg" />
+			</image>
+		<hotspot name="spot1" style="skin_navvystyle" ath="-176.189" atv="21.125" linkedscene="scene_access_hallway" />
+		<hotspot name="spot2" style="skin_navvystyle" ath="3.980" atv="21.945" linkedscene="scene_manufacturing_2" />
+
+		</scene>
+
+		<scene name="scene_Manufacturing_2" title="Manufacturing 2" onstart="" havevrimage="true" thumburl="panos/Manufacturing_2.tiles/thumb.jpg" lat="" lng="" heading="">
+
+			<view hlookat="-65.399" vlookat="18.627" fovtype="MFOV" fov="119.869" maxpixelzoom="1.5" fovmin="80" fovmax="110" limitview="auto" />
+
+
+			<preview url="panos/Manufacturing_2.tiles/preview.jpg" />
+
+			<image if="!webvr.isenabled">
+				<cube url="panos/Manufacturing_2.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1152,2176,4352" />
+			</image>
+
+			<image if="webvr.isenabled">
+				<cube url="panos/Manufacturing_2.tiles/vr/pano_%s.jpg" />
+			</image>
+		<hotspot name="spot1" style="skin_navvystyle" ath="-125.010" atv="20.320" linkedscene="scene_manufacturing_1" />
+		<hotspot name="spot2" style="skin_navvystyle" ath="41.311" atv="30.124" linkedscene="scene_detail_5" />
+		<hotspot name="spot3" style="skin_navvystyle" ath="-27.222" atv="18.364" linkedscene="scene_manufacturing_3" />
+
+		</scene>
+
+		<scene name="scene_Manufacturing_3" title="Manufacturing 3" onstart="" havevrimage="true" thumburl="panos/Manufacturing_3.tiles/thumb.jpg" lat="" lng="" heading="">
+
+			<view hlookat="-25.055" vlookat="-4.993" fovtype="MFOV" fov="123.439" maxpixelzoom="1.5" fovmin="80" fovmax="110" limitview="auto" />
+
+
+			<preview url="panos/Manufacturing_3.tiles/preview.jpg" />
+
+			<image if="!webvr.isenabled">
+				<cube url="panos/Manufacturing_3.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1152,2176,4352" />
+			</image>
+
+			<image if="webvr.isenabled">
+				<cube url="panos/Manufacturing_3.tiles/vr/pano_%s.jpg" />
+			</image>
+		<hotspot name="spot1" style="skin_navvystyle" ath="54.170" atv="20.283" linkedscene="scene_detail_5" />
+		<hotspot name="spot2" style="skin_navvystyle" ath="98.536" atv="17.557" linkedscene="scene_manufacturing_2" />
+		<hotspot name="spot3" style="skin_navvystyle" ath="-131.023" atv="27.093" linkedscene="scene_detail_4" />
+		<hotspot name="spot4" style="skin_navvystyle" ath="-86.973" atv="18.060" linkedscene="scene_manufacturing_4" />
+		<hotspot name="spot5" style="skin_infostyle" ath="-39.459" atv="2.818" onclick="openProduct1"/>
+		<action name="openProduct1">
+			act_smart_in_toggleemptylayer('product-pages/products1.html','');
+		</action>
+
+		<hotspot name="spot6" style="skin_infostyle" ath="17.346" atv="2.616" onclick="openProduct2"/>
+		<action name="openProduct2">
+			act_smart_in_toggleemptylayer('product-pages/products2.html','');
+		</action>
+
+
+		</scene>
+
+		<scene name="scene_Manufacturing_4" title="Manufacturing 4" onstart="" havevrimage="true" thumburl="panos/Manufacturing_4.tiles/thumb.jpg" lat="" lng="" heading="">
+
+			<view hlookat="24.407" vlookat="11.248" fovtype="MFOV" fov="118.171" maxpixelzoom="1.5" fovmin="80" fovmax="110" limitview="auto" />
+
+
+			<preview url="panos/Manufacturing_4.tiles/preview.jpg" />
+
+			<image if="!webvr.isenabled">
+				<cube url="panos/Manufacturing_4.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1152,2176,4352" />
+			</image>
+
+			<image if="webvr.isenabled">
+				<cube url="panos/Manufacturing_4.tiles/vr/pano_%s.jpg" />
+			</image>
+		<hotspot name="spot1" style="skin_navvystyle" ath="-118.966" atv="18.067" linkedscene="scene_manufacturing_3" />
+		<hotspot name="spot2" style="skin_navvystyle" ath="-1.591" atv="22.174" linkedscene="scene_detail_3_" />
+		<hotspot name="spot3" style="skin_navvystyle" ath="55.135" atv="17.193" linkedscene="scene_detail_2" />
+		<hotspot name="spot4" style="skin_navvystyle" ath="138.434" atv="12.627" linkedscene="scene_manufacturing_5" />
+
+		</scene>
+
+		<scene name="scene_Manufacturing_5" title="Manufacturing 5" onstart="" havevrimage="true" thumburl="panos/Manufacturing_5.tiles/thumb.jpg" lat="" lng="" heading="">
+
+			<view hlookat="-4.478" vlookat="18.554" fovtype="MFOV" fov="111.161" maxpixelzoom="1.5" fovmin="80" fovmax="110" limitview="auto" />
+
+
+			<preview url="panos/Manufacturing_5.tiles/preview.jpg" />
+
+			<image if="!webvr.isenabled">
+				<cube url="panos/Manufacturing_5.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1152,2176,4352" />
+			</image>
+
+			<image if="webvr.isenabled">
+				<cube url="panos/Manufacturing_5.tiles/vr/pano_%s.jpg" />
+			</image>
+		<hotspot name="spot1" style="skin_navvystyle" ath="-152.530" atv="15.614" linkedscene="scene_manufacturing_4" />
+		<hotspot name="spot2" style="skin_navvystyle" ath="-124.821" atv="11.017" linkedscene="scene_detail_2" />
+		<hotspot name="spot3" style="skin_navvystyle" ath="35.515" atv="18.863" linkedscene="scene_detail_1" />
+		<hotspot name="spot4" style="skin_infostyle" ath="-11.808" atv="-3.093" onclick="openProduct1"/>
+		<action name="openProduct1">
+			act_smart_in_toggleemptylayer('product-pages/products1.html','');
+		</action>
+
+
+		</scene>
+
+		<scene name="scene_Detail_1" title="Detail 1" onstart="" havevrimage="true" thumburl="panos/Detail_1.tiles/thumb.jpg" lat="" lng="" heading="">
+
+			<view hlookat="379.045" vlookat="20.122" fovtype="MFOV" fov="111.387" maxpixelzoom="1.5" fovmin="80" fovmax="110" limitview="auto" />
+
+
+			<preview url="panos/Detail_1.tiles/preview.jpg" />
+
+			<image if="!webvr.isenabled">
+				<cube url="panos/Detail_1.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1152,2176,4352" />
+			</image>
+
+			<image if="webvr.isenabled">
+				<cube url="panos/Detail_1.tiles/vr/pano_%s.jpg" />
+			</image>
+		<hotspot name="spot1" style="skin_navvystyle" ath="167.457" atv="13.149" linkedscene="scene_manufacturing_5" />
+		<hotspot name="spot2" style="skin_viddystyle" ath="-8.179" atv="14.666" onclick="openProduct1"/>
+		<action name="openProduct1">
+			act_smart_in_toggleemptylayer('product-pages/video.html','');
+		</action>
+
+		<hotspot name="spot3" style="skin_infostyle" ath="-84.523" atv="-4.925" onclick="openProduct2"/>
+		<action name="openProduct2">
+			act_smart_in_toggleemptylayer('product-pages/products1.html','');
+		</action>
+
+
+		</scene>
+
+		<scene name="scene_Detail_2" title="Detail 2" onstart="" havevrimage="true" thumburl="panos/Detail_2.tiles/thumb.jpg" lat="" lng="" heading="">
+
+			<view hlookat="9.240" vlookat="25.437" fovtype="MFOV" fov="119.949" maxpixelzoom="1.5" fovmin="80" fovmax="110" limitview="auto" />
+
+
+			<preview url="panos/Detail_2.tiles/preview.jpg" />
+
+			<image if="!webvr.isenabled">
+				<cube url="panos/Detail_2.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1152,2176,4352" />
+			</image>
+
+			<image if="webvr.isenabled">
+				<cube url="panos/Detail_2.tiles/vr/pano_%s.jpg" />
+			</image>
+		<hotspot name="spot1" style="skin_navvystyle" ath="-79.803" atv="15.343" linkedscene="scene_detail_3_" />
+		<hotspot name="spot2" style="skin_navvystyle" ath="-143.512" atv="13.154" linkedscene="scene_manufacturing_4" />
+		<hotspot name="spot3" style="skin_navvystyle" ath="151.620" atv="10.599" linkedscene="scene_manufacturing_5" />
+		<hotspot name="spot4" style="skin_viddystyle" ath="8.836" atv="16.820" onclick="openProduct1"/>
+		<action name="openProduct1">
+			act_smart_in_toggleemptylayer('product-pages/video.html','');
+		</action>
+
+		</scene>
+
+		<scene name="scene_Detail_3_" title="Detail 3 " onstart="" havevrimage="true" thumburl="panos/Detail_3_.tiles/thumb.jpg" lat="" lng="" heading="">
+
+			<view hlookat="-6.023" vlookat="29.764" fovtype="MFOV" fov="119.855" maxpixelzoom="1.5" fovmin="80" fovmax="110" limitview="auto" />
+
+
+			<preview url="panos/Detail_3_.tiles/preview.jpg" />
+
+			<image if="!webvr.isenabled">
+				<cube url="panos/Detail_3_.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1152,2176,4352" />
+			</image>
+
+			<image if="webvr.isenabled">
+				<cube url="panos/Detail_3_.tiles/vr/pano_%s.jpg" />
+			</image>
+		<hotspot name="spot1" style="skin_navvystyle" ath="-123.670" atv="20.046" linkedscene="scene_manufacturing_4" />
+		<hotspot name="spot2" style="skin_navvystyle" ath="153.669" atv="22.053" linkedscene="scene_detail_2" />
+		<hotspot name="spot3" style="skin_navvystyle" ath="-163.275" atv="5.419" linkedscene="scene_manufacturing_5" />
+		<hotspot name="spot4" style="skin_viddystyle" ath="-2.229" atv="16.520" onclick="openProduct1"/>
+		<action name="openProduct1">
+			act_smart_in_toggleemptylayer('product-pages/video.html','');
+		</action>
+
+		</scene>
+
+		<scene name="scene_Detail_4" title="Detail 4" onstart="" havevrimage="true" thumburl="panos/Detail_4.tiles/thumb.jpg" lat="" lng="" heading="">
+
+			<view hlookat="7.981" vlookat="24.782" fovtype="MFOV" fov="115.567" maxpixelzoom="1.5" fovmin="80" fovmax="110" limitview="auto" />
+
+
+			<preview url="panos/Detail_4.tiles/preview.jpg" />
+
+			<image if="!webvr.isenabled">
+				<cube url="panos/Detail_4.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1152,2176,4352" />
+			</image>
+
+			<image if="webvr.isenabled">
+				<cube url="panos/Detail_4.tiles/vr/pano_%s.jpg" />
+			</image>
+		<hotspot name="spot1" style="skin_navvystyle" ath="116.638" atv="31.480" linkedscene="scene_manufacturing_3" />
+		<hotspot name="spot2" style="skin_navvystyle" ath="161.324" atv="15.538" linkedscene="scene_manufacturing_2" />
+		<hotspot name="spot3" style="skin_navvystyle" ath="32.904" atv="13.052" linkedscene="scene_manufacturing_4" />
+		<hotspot name="spot4" style="skin_viddystyle" ath="-13.784" atv="17.711" onclick="openProduct1"/>
+		<action name="openProduct1">
+			act_smart_in_toggleemptylayer('product-pages/video.html','');
+		</action>
+
+		<hotspot name="spot5" style="skin_viddystyle" ath="29.720" atv="24.436" onclick="openProduct1"/>
+		<action name="openProduct1">
+			act_smart_in_toggleemptylayer('product-pages/video.html','');
+		</action>
+
+
+		</scene>
+
+		<scene name="scene_Detail_5" title="Detail 5" onstart="" havevrimage="true" thumburl="panos/Detail_5.tiles/thumb.jpg" lat="" lng="" heading="">
+
+			<view hlookat="0.930" vlookat="29.063" fovtype="MFOV" fov="119.951" maxpixelzoom="2.0" fovmin="70" fovmax="120" limitview="auto" />
+
+			<preview url="panos/Detail_5.tiles/preview.jpg" />
+
+			<image if="!webvr.isenabled">
+				<cube url="panos/Detail_5.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1152,2176,4352" />
+			</image>
+
+			<image if="webvr.isenabled">
+				<cube url="panos/Detail_5.tiles/vr/pano_%s.jpg" />
+			</image>
+		<hotspot name="spot1" style="skin_navvystyle" ath="177.781" atv="22.497" linkedscene="scene_manufacturing_1" />
+		<hotspot name="spot2" style="skin_navvystyle" ath="-111.714" atv="22.734" linkedscene="scene_manufacturing_3" />
+		<hotspot name="spot3" style="skin_viddystyle" ath="-65.433" atv="9.411" onclick="openProduct1"/>
+		<action name="openProduct1">
+			act_smart_in_toggleemptylayer('product-pages/video.html','');
+		</action>
+
+		<hotspot name="spot4" style="skin_infostyle" ath="-50.846" atv="6.944" onclick="openProduct2"/>
+		<action name="openProduct2">
+			act_smart_in_toggleemptylayer('product-pages/products2.html','');
+		</action>
+
+		<hotspot name="spot5" style="skin_infostyle" ath="-34.173" atv="14.581" onclick="openProduct3"/>
+		<action name="openProduct3">
+			act_smart_in_toggleemptylayer('product-pages/products3.html','');
+		</action>
+
+		<hotspot name="spot6" style="skin_infostyle" ath="-21.741" atv="6.733" onclick="openProduct4"/>
+		<action name="openProduct4">
+			act_smart_in_toggleemptylayer('product-pages/products4.html','');
+		</action>
+
+		<hotspot name="spot7" style="skin_infostyle" ath="-18.082" atv="17.802" onclick="openProduct5"/>
+		<action name="openProduct5">
+			act_smart_in_toggleemptylayer('product-pages/products1.html','');
+		</action>
+
+		<hotspot name="spot8" style="skin_infostyle" ath="-2.785" atv="7.826" onclick="openProduct6"/>
+		<action name="openProduct6">
+			act_smart_in_toggleemptylayer('product-pages/products2.html','');
+		</action>
+
+		<hotspot name="spot9" style="skin_infostyle" ath="-11.795" atv="13.324" onclick="openProduct7"/>
+		<action name="openProduct7">
+			act_smart_in_toggleemptylayer('product-pages/products3.html','');
+		</action>
+
+		<hotspot name="spot10" style="skin_infostyle" ath="-5.753" atv="22.774" onclick="openProduct8"/>
+		<action name="openProduct8">
+			act_smart_in_toggleemptylayer('product-pages/products4.html','');
+		</action>
+
+		<hotspot name="spot11" style="skin_viddystyle" ath="3.373" atv="17.887" onclick="openProduct9"/>
+		<action name="openProduct9">
+			act_smart_in_toggleemptylayer('product-pages/video.html','');
+		</action>
+
+		<hotspot name="spot12" style="skin_infostyle" ath="19.097" atv="3.319" onclick="openProduct10"/>
+		<action name="openProduct10">
+			act_smart_in_toggleemptylayer('product-pages/products1.html','');
+		</action>
+
+		<hotspot name="spot13" style="skin_infostyle" ath="19.084" atv="23.002" onclick="openProduct11"/>
+		<action name="openProduct11">
+			act_smart_in_toggleemptylayer('product-pages/products2.html','');
+		</action>
+
+		<hotspot name="spot14" style="skin_infostyle" ath="33.163" atv="6.943" onclick="openProduct12"/>
+		<action name="openProduct12">
+			act_smart_in_toggleemptylayer('product-pages/products3.html','');
+		</action>
+
+		<hotspot name="spot15" style="skin_infostyle" ath="33.807" atv="16.642" onclick="openProduct13"/>
+		<action name="openProduct13">
+			act_smart_in_toggleemptylayer('product-pages/products4.html','');
+		</action>
+
+		<hotspot name="spot16" style="skin_viddystyle" ath="64.258" atv="12.270" onclick="openProduct14"/>
+		<action name="openProduct14">
+			act_smart_in_toggleemptylayer('product-pages/video.html','');
+		</action>
 
 		</scene>
 
